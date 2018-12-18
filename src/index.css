@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +12,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.menubar {
+  margin:0;
+  font-size: 18pt;
+  height: 130px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.menutext{
+  margin-top: 20%;
+  margin-bottom: 20%;
+  color: #000000;
+}
+
+.menutext:hover {
+  color:#0000EE;
+  text-decoration: underline;
 }
