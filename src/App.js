@@ -119,9 +119,9 @@ class App extends Component {
             </Row>
           </div>
           <div>
-              <Route path="/" component={()=><Home swapComponent={this.swapComponent.bind(this)}/>}/>
-              <Route path="/work" component={()=><Work swapComponent={this.swapComponent.bind(this)}/>}/>
-              <Route path="/contact" component={()=><Contact swapComponent={this.swapComponent.bind(this)}/>}/>
+              <Route exact path="/" component={Home}/>
+              <Route path="/work" component={Work}/>
+              <Route path="/contact" component={Contact}/>
             </div>
         </div>
       </Router>
@@ -159,7 +159,7 @@ class Work extends Component {
   render(){
     return(
       <Router>
-        Work
+        <div>Work</div>
       </Router>
     )
   }
@@ -177,7 +177,7 @@ class Contact extends Component {
   render(){
     return(
       <Router>
-        Contact
+        <div>Contact</div>
       </Router>
     )
   }
