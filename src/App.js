@@ -128,7 +128,7 @@ class App extends Component {
               </Col>
             </Row>
           </div>
-          <div>
+          <div className="component">
               <Route exact path="/" component={Home}/>
               <Route path="/work/:medium" component={Work}/>
               <Route path="/contact" component={Contact}/>
@@ -174,6 +174,7 @@ class Work extends Component {
   }
 
   getImages(){
+    
     if (this.props.match.params.medium == "all") {
       return IMAGES;
     } else {
@@ -183,10 +184,18 @@ class Work extends Component {
 
   render(){
 
+    var filteredImages = this.getImages();
+    var emptyMessage = "";
+    if (filteredImages.length == 0) {
+      emptyMessage = "No Images to Display.";
+    }
+    
+
     return(
       <Router>
           <div>
-            <Gallery images={this.getImages()}/>
+            <Gallery images={filteredImages}/>
+            <div>{emptyMessage}</div>
           </div>
       </Router>
     )
