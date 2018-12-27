@@ -101,7 +101,7 @@ class App extends Component {
                   </Link>
               </Col>
               <Col span={6}>
-                <Link to="/work" className="menutext">
+                <Link to="/work/all" className="menutext">
                   <Dropdown overlay={workMenu}>
                       <div className="menutext">
                         Work <Icon type="down" />
@@ -120,7 +120,7 @@ class App extends Component {
           </div>
           <div>
               <Route exact path="/" component={Home}/>
-              <Route path="/work" component={Work}/>
+              <Route path="/work/:medium" component={Work}/>
               <Route path="/contact" component={Contact}/>
             </div>
         </div>
@@ -159,7 +159,10 @@ class Work extends Component {
   render(){
     return(
       <Router>
-        <div>Work</div>
+          <div>
+            <div>Work</div>
+            <div>{this.props.match.params.medium}</div>
+          </div>
       </Router>
     )
   }
