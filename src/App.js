@@ -17,7 +17,8 @@ const IMAGES =
           thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
           thumbnailWidth: 320,
           thumbnailHeight: 174,
-          caption: "After Rain (Jeshu John - designerspics.com)"
+          caption: "After Rain (Jeshu John - designerspics.com)",
+          medium:"paint"
   },
   {
           src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -25,18 +26,27 @@ const IMAGES =
           thumbnailWidth: 320,
           thumbnailHeight: 212,
           tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-          caption: "Boats (Jeshu John - designerspics.com)"
+          caption: "Boats (Jeshu John - designerspics.com)", 
+          medium:"watercolor"
   },
 
   {
           src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
           thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
           thumbnailWidth: 320,
-          thumbnailHeight: 212
+          thumbnailHeight: 212,
+          medium:"pencil"
   }]
 
   const workMenu = (
     <Menu>
+      <Menu.Item>
+        <Link to="/work/all">
+          <div>
+            All
+          </div>
+        </Link>
+      </Menu.Item>
       <Menu.Item>
         <Link to="/work/oil">
           <div>
@@ -150,18 +160,35 @@ class Home extends Component {
 class Work extends Component {
   constructor(props){
     super(props);
+    this.getImages = this.getImages.bind(this);
+    this.filterImages = this.filterImages.bind(this);
   }
 
   changeComponent(newComponent){
     this.props.swapComponent(newComponent);
   }
 
+
+  filterImages(image){
+    return image["medium"] == this.props.match.params.medium
+  }
+
+  getImages(){
+    if (this.props.match.params.medium == "all") {
+      return IMAGES;
+    } else {
+      return IMAGES.filter(this.filterImages)
+    }
+  }
+
   render(){
+
     return(
       <Router>
           <div>
             <div>Work</div>
             <div>{this.props.match.params.medium}</div>
+            <Gallery images={this.getImages()}/>
           </div>
       </Router>
     )
