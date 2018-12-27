@@ -186,8 +186,6 @@ class Work extends Component {
     return(
       <Router>
           <div>
-            <div>Work</div>
-            <div>{this.props.match.params.medium}</div>
             <Gallery images={this.getImages()}/>
           </div>
       </Router>
