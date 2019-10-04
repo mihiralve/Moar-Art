@@ -8,19 +8,22 @@ import signature from './images/signature.png'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Redirect
 } from 'react-router-dom';
 
 const IMAGES =
   [{
+          id: 0,
           src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
           thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
           thumbnailWidth: 320,
           thumbnailHeight: 174,
           caption: "After Rain (Jeshu John - designerspics.com)",
-          medium:"paint"
+          medium:"oil"
   },
   {
+          id: 1,
           src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
           thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
           thumbnailWidth: 320,
@@ -31,6 +34,7 @@ const IMAGES =
   },
 
   {
+          id: 2,
           src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
           thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
           thumbnailWidth: 320,
@@ -111,13 +115,11 @@ class App extends Component {
                   </Link>
               </Col>
               <Col span={6}>
-                <Link to="/work/all" className="menutext">
                   <Dropdown overlay={workMenu}>
                       <div className="menutext">
                         Work <Icon type="down" />
                       </div>
                   </Dropdown>
-                </Link>
               </Col>
               <Col span={6}>
                   <Link to="/contact" className="menutext">
@@ -132,6 +134,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/work/:medium" component={Work}/>
               <Route path="/contact" component={Contact}/>
+              <Route path="/piece/:id" component={Piece}/>
             </div>
         </div>
       </Router>
@@ -151,50 +154,64 @@ class Home extends Component {
   render(){
     return(
       <Router>
-        <Gallery images={IMAGES}/>
+        <Gallery images={IMAGES} enableImageSelection={false}/>
       </Router>
     )
   }
 }
 
+// Pages showing thumbnails of all work (can be filtered by medium)
 class Work extends Component {
   constructor(props){
     super(props);
     this.getImages = this.getImages.bind(this);
     this.filterImages = this.filterImages.bind(this);
+
+    this.state = {
+      toPiece: false,
+      toPieceId: -1
+    }
   }
 
   changeComponent(newComponent){
     this.props.swapComponent(newComponent);
   }
 
-
+  // filter images by medium
   filterImages(image){
-    return image["medium"] == this.props.match.params.medium
+    return image["medium"] === this.props.match.params.medium
   }
 
+  // Either return all images or call filterImages
   getImages(){
     
-    if (this.props.match.params.medium == "all") {
+    if (this.props.match.params.medium === "all") {
       return IMAGES;
     } else {
       return IMAGES.filter(this.filterImages)
     }
   }
 
+  loadImage(ind){
+    this.setState({toPiece:true, toPieceId:ind})
+  }
+
   render(){
+
+    if (this.state.toPiece === true){
+      return <Redirect to={'/piece/:' + this.state.toPieceId} />
+    }
 
     var filteredImages = this.getImages();
     var emptyMessage = "";
-    if (filteredImages.length == 0) {
+    if (filteredImages.length === 0) {
       emptyMessage = "No Images to Display.";
     }
-    
 
     return(
       <Router>
           <div>
-            <Gallery images={filteredImages}/>
+            <Gallery images={filteredImages} enableLightbox={false} enableImageSelection={false} onClickThumbnail={(ind) => {this.loadImage(ind)}}/>
             <div>{emptyMessage}</div>
           </div>
       </Router>
@@ -202,6 +219,29 @@ class Work extends Component {
   }
 }
 
+// Page showing larger image and more details about each piece
+class Piece extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  changeComponent(newComponent){
+    this.props.swapComponent(newComponent);
+  }
+
+  render(){
+    return(
+      <Router>
+        <div>
+          Displaying Image #{this.props.match.params.id}
+        </div>
+      </Router>
+    )
+  }
+
+}
+
+// Contact Page
 class Contact extends Component {
   constructor(props){
     super(props);
