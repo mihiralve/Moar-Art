@@ -20,7 +20,8 @@ const IMAGES =
           thumbnailWidth: 320,
           thumbnailHeight: 174,
           caption: "After Rain (Jeshu John - designerspics.com)",
-          medium:"oil"
+          medium:"oil",
+          price:"$100"
   },
   {
           id: 1,
@@ -30,7 +31,8 @@ const IMAGES =
           thumbnailHeight: 212,
           tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
           caption: "Boats (Jeshu John - designerspics.com)", 
-          medium:"watercolor"
+          medium:"watercolor",
+          price:"$100"
   },
 
   {
@@ -39,7 +41,8 @@ const IMAGES =
           thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
           thumbnailWidth: 320,
           thumbnailHeight: 212,
-          medium:"pencil"
+          medium:"pencil",
+          price:"$100"
   }]
 
   const workMenu = (
@@ -134,7 +137,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/work/:medium" component={Work}/>
               <Route path="/contact" component={Contact}/>
-              <Route path="/piece/:id" component={Piece}/>
+              <Route path="/detail/:id" component={Detail}/>
             </div>
         </div>
       </Router>
@@ -168,8 +171,8 @@ class Work extends Component {
     this.filterImages = this.filterImages.bind(this);
 
     this.state = {
-      toPiece: false,
-      toPieceId: -1
+      toDetail: false,
+      toDetailId: -1
     }
   }
 
@@ -193,13 +196,13 @@ class Work extends Component {
   }
 
   loadImage(ind){
-    this.setState({toPiece:true, toPieceId:ind})
+    this.setState({toDetail:true, toDetailId:ind})
   }
 
   render(){
 
-    if (this.state.toPiece === true){
-      return <Redirect to={'/piece/:' + this.state.toPieceId} />
+    if (this.state.toDetail === true){
+      return <Redirect to={'/detail/' + this.state.toDetailId} />
     }
 
     var filteredImages = this.getImages();
@@ -219,21 +222,29 @@ class Work extends Component {
   }
 }
 
-// Page showing larger image and more details about each piece
-class Piece extends Component {
+// Page showing larger image and more details about each image
+class Detail extends Component {
   constructor(props){
     super(props);
+
+    this.img = this.getImage(this.props.match.params.id)
   }
 
   changeComponent(newComponent){
     this.props.swapComponent(newComponent);
   }
 
+  getImage(id){
+    return IMAGES[id]
+  }
+
   render(){
     return(
       <Router>
         <div>
-          Displaying Image #{this.props.match.params.id}
+          <h1 className="detail-caption">{this.img.caption}</h1>
+          <img src={this.img.src} className="detail-img"/>
+          
         </div>
       </Router>
     )

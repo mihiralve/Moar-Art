@@ -22,6 +22,21 @@
   color: #61dafb;
 }
 
+.detail-caption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.detail-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
