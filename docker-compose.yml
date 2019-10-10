@@ -7,6 +7,7 @@ networks:
 services:
   moarart:
     build: .
+    restart: always
     ports: 
       - "3002:3000"
     labels:
@@ -14,6 +15,6 @@ services:
       - "traefik.docker.network=web"
       - "traefik.backend=moarart"
       - "traefik.frontend.rule=Host:moarart.mihiralve.com"
-      - "traefik.port=3002"
+      - "traefik.port=3000"
     networks:
       - web
