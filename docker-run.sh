@@ -1,1 +1,2 @@
-docker run -p 3002:3000 --name moarart moarart
+./docker-build.sh
+docker-compose up -d

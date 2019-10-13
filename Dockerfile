@@ -9,9 +9,10 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY package.json /app/package.json
-copy yarn.lock /app/yarn.lock
+COPY yarn.lock /app/yarn.lock
 RUN yarn
 COPY ./ /app/
+COPY /src/ /app/src
 RUN yarn build
 
 # start app
