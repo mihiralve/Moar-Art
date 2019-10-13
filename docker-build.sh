@@ -1,1 +1,1 @@
-docker build --tag=moarart .
+docker build --tag=moarart --no-cache .
