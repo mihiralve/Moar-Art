@@ -169,6 +169,7 @@ class Work extends Component {
     super(props);
     this.getImages = this.getImages.bind(this);
     this.filterImages = this.filterImages.bind(this);
+    this.loadImage = this.loadImage.bind(this);
 
     this.state = {
       toDetail: false,
@@ -182,7 +183,7 @@ class Work extends Component {
 
   // filter images by medium
   filterImages(image){
-    return image["medium"] === this.props.match.params.medium
+    return image["medium"].toLowerCase() === this.props.match.params.medium.toLowerCase()
   }
 
   // Either return all images or call filterImages
@@ -196,7 +197,9 @@ class Work extends Component {
   }
 
   loadImage(ind){
-    this.setState({toDetail:true, toDetailId:ind})
+
+    this.setState({toDetail:true, toDetailId:this.getImages()[ind].id})
+
   }
 
   render(){
@@ -214,7 +217,7 @@ class Work extends Component {
     return(
       <Router>
           <div>
-            <Gallery images={filteredImages} enableLightbox={false} enableImageSelection={false} onClickThumbnail={(ind) => {this.loadImage(ind)}}/>
+            <Gallery images={filteredImages} enableLightbox={false} enableImageSelection={false} onClickThumbnail={(ind) => this.loadImage(ind)}/>
             <div>{emptyMessage}</div>
           </div>
       </Router>
@@ -244,7 +247,10 @@ class Detail extends Component {
         <div>
           <h1 className="detail-caption">{this.img.caption}</h1>
           <img src={this.img.src} className="detail-img"/>
-          
+          <h2 className="detail-info">Price: {this.img.price}</h2>
+          <h2 className="detail-info">Medium: {this.img.medium}</h2>
+          <h2 className="detail-info">Size: {this.img.size}</h2>
+          <h2 className="detail-info">To purchase contact <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a></h2>
         </div>
       </Router>
     )
