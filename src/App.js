@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { render } from 'react-dom';
 import Gallery from 'react-grid-gallery';
-import { Row, Col, Menu, Dropdown, Icon } from 'antd';
+import { Row, Col, Menu, Dropdown, Icon, Tooltip } from 'antd';
 import signature from './images/signature.png'
 import {
   BrowserRouter as Router,
@@ -19,9 +19,11 @@ const IMAGES =
           thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
           thumbnailWidth: 320,
           thumbnailHeight: 174,
-          caption: "After Rain (Jeshu John - designerspics.com)",
-          medium:"oil",
-          price:"$100"
+          caption: <div className="tooltip"><a href="detail/0/">After Rain (Jeshu John - designerspics.com)<span className="tooltiptext">Click here for more details</span></a></div>,
+          title: "After Rain (Jeshu John - designerspics.com)",
+          medium:"Oil",
+          price:"$100",
+          size: "10x10"
   },
   {
           id: 1,
@@ -29,10 +31,11 @@ const IMAGES =
           thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
           thumbnailWidth: 320,
           thumbnailHeight: 212,
-          tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-          caption: "Boats (Jeshu John - designerspics.com)", 
-          medium:"watercolor",
-          price:"$100"
+          caption: <div className="tooltip"><a href="detail/1/">Boats (Jeshu John - designerspics.com)<span className="tooltiptext">Click here for more details</span></a></div>,
+          title: "Boats (Jeshu John - designerspics.com)",
+          medium:"Watercolor",
+          price:"$100",
+          size: "10x10"
   },
 
   {
@@ -41,8 +44,12 @@ const IMAGES =
           thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
           thumbnailWidth: 320,
           thumbnailHeight: 212,
-          medium:"pencil",
-          price:"$100"
+          caption: <a href="detail/2/">Pencils (Jeshu John - designerspics.com)</a>,
+          caption: <div className="tooltip"><a href="detail/2/">Pencils (Jeshu John - designerspics.com)<span className="tooltiptext">Click here for more details</span></a></div>,
+          title: "Pencils (Jeshu John - designerspics.com)",
+          medium:"Pencil",
+          price:"$100",
+          size: "10x10"
   }]
 
   const workMenu = (
@@ -245,7 +252,7 @@ class Detail extends Component {
     return(
       <Router>
         <div>
-          <h1 className="detail-caption">{this.img.caption}</h1>
+          <h1 className="detail-caption">{this.img.title}</h1>
           <img src={this.img.src} className="detail-img"/>
           <h2 className="detail-info">Price: {this.img.price}</h2>
           <h2 className="detail-info">Medium: {this.img.medium}</h2>
@@ -271,7 +278,18 @@ class Contact extends Component {
   render(){
     return(
       <Router>
-        <div>Contact</div>
+        <div>
+          <p className="contact-name">
+            Meera Alve
+            (Artist)
+          </p>
+          <p className="contact-bio">
+            After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
+          </p>
+          <p className="contact-bio">
+            Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
+          </p>
+        </div>
       </Router>
     )
   }
