@@ -16,7 +16,7 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
       - "traefik.backend=moarart"
-      - "traefik.frontend.rule=Host:moarart.mihiralve.com"
+      - "traefik.frontend.rule=Host:moarart.net"
       - "traefik.port=3000"
     networks:
       - web
