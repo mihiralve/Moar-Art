@@ -13,8 +13,11 @@ COPY yarn.lock /app/yarn.lock
 RUN yarn
 COPY ./ ./
 COPY src/ ./src
-RUN yarn build
+RUN yarn run build
+
 
 # start app
-CMD ["yarn", "start"]
+#CMD ["yarn", "start"]
+RUN yarn global add serve
+CMD ["serve", "-p", "3000", "-s", "build"]
 EXPOSE 3000
