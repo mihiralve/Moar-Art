@@ -116,7 +116,7 @@
 }
 
 .contact-bio {
-  font-size: 175%;
+  font-size: 125%;
   text-align: left;
   margin-left: 50px;
   margin-right:50px;
@@ -139,6 +139,13 @@
   height: auto;
   image-orientation: from-image;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.home-div {
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }

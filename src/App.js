@@ -26,9 +26,9 @@ const IMAGES =
   [{
           id: 0,
           src: "https://moarart.net/images/ganapati_1.png",
-          thumbnail: "https://moarart.net/images/ganapati_1.png",
-          thumbnailWidth: 2448,
-          thumbnailHeight: 3264,
+          thumbnail: "https://moarart.net/images/ganapati_1_thumb.png",
+          thumbnailWidth: 375,
+          thumbnailHeight: 500,
           title: "Baby Ganesha",
           medium:"Pencil",
           price:"Sold ($350)",
@@ -37,9 +37,9 @@ const IMAGES =
   {
           id: 1,
           src: "https://moarart.net/images/ganapati_2.jpg",
-          thumbnail: "https://moarart.net/images/ganapati_2.jpg",
-          thumbnailWidth: 1620,
-          thumbnailHeight: 2070,
+          thumbnail: "https://moarart.net/images/ganapati_2_thumb.jpg",
+          thumbnailWidth: 391,
+          thumbnailHeight: 500,
           title: "Zen Ganesh",
           medium:"Mixed Media",
           price:"Sold ($200)",
@@ -49,9 +49,9 @@ const IMAGES =
   {
           id: 2,
           src: "https://moarart.net/images/ganapati_3.jpg",
-          thumbnail: "https://moarart.net/images/ganapati_3.jpg",
-          thumbnailWidth: 1280,
-          thumbnailHeight: 960,
+          thumbnail: "https://moarart.net/images/ganapati_3_thumb.jpg",
+          thumbnailWidth: 667,
+          thumbnailHeight: 500,
           title: "Blessings",
           medium:"Pastel",
           price:"Sold ($2000)",
@@ -61,9 +61,9 @@ const IMAGES =
   {
     id: 3,
     src: "https://moarart.net/images/tree_of_life_1.jpg",
-    thumbnail: "https://moarart.net/images/tree_of_life_1.jpg",
-    thumbnailWidth: 2461,
-    thumbnailHeight: 3003,
+    thumbnail: "https://moarart.net/images/tree_of_life_1_thumb.jpg",
+    thumbnailWidth: 410,
+    thumbnailHeight: 500,
     title: "Tree of Life",
     medium:"Mixed Media",
     price:"$800",
@@ -73,9 +73,9 @@ const IMAGES =
   {
     id: 4,
     src: "https://moarart.net/images/pensive_buddha.jpg",
-    thumbnail: "https://moarart.net/images/pensive_buddha.jpg",
-    thumbnailWidth: 2386,
-    thumbnailHeight: 3393,
+    thumbnail: "https://moarart.net/images/pensive_buddha_thumb.jpg",
+    thumbnailWidth: 400,
+    thumbnailHeight: 500,
     title: "Pensive Buddha",
     medium:"Mixed Media",
     price:"$600",
@@ -85,9 +85,9 @@ const IMAGES =
   {
     id: 5,
     src: "https://moarart.net/images/tree_of_life_3.jpg",
-    thumbnail: "https://moarart.net/images/tree_of_life_3.jpg",
-    thumbnailWidth: 2235,
-    thumbnailHeight: 3393,
+    thumbnail: "https://moarart.net/images/tree_of_life_3_thumb.jpg",
+    thumbnailWidth: 329,
+    thumbnailHeight: 500,
     title: "Budding",
     medium:"Mixed Media",
     price:"$450",
@@ -97,9 +97,9 @@ const IMAGES =
   {
     id: 6,
     src: "https://moarart.net/images/blauet.jpg",
-    thumbnail: "https://moarart.net/images/blauet.jpg",
-    thumbnailWidth: 2333,
-    thumbnailHeight: 3155,
+    thumbnail: "https://moarart.net/images/blauet_thumb.jpg",
+    thumbnailWidth: 370,
+    thumbnailHeight: 500,
     title: "Blauet",
     medium:"Pencil",
     price:"$350",
@@ -109,9 +109,9 @@ const IMAGES =
   {
     id: 7,
     src: "https://moarart.net/images/oriental_beauty.jpg",
-    thumbnail: "https://moarart.net/images/oriental_beauty.jpg",
-    thumbnailWidth: 2334,
-    thumbnailHeight: 3024,
+    thumbnail: "https://moarart.net/images/oriental_beauty_thumb.jpg",
+    thumbnailWidth: 386,
+    thumbnailHeight: 500,
     title: "Oriental Beauty",
     medium:"Pencil",
     price:"$350",
@@ -121,9 +121,9 @@ const IMAGES =
   {
     id: 8,
     src: "https://moarart.net/images/gallant_fowl.jpg",
-    thumbnail: "https://moarart.net/images/gallant_fowl.jpg",
-    thumbnailWidth: 3399,
-    thumbnailHeight: 2646,
+    thumbnail: "https://moarart.net/images/gallant_fowl_thumb.jpg",
+    thumbnailWidth: 642,
+    thumbnailHeight: 500,
     title: "Gallant Fowl",
     medium:"Mixed Media",
     price:"$175",
@@ -133,9 +133,9 @@ const IMAGES =
   {
     id: 9,
     src: "https://moarart.net/images/arrogant_display.jpg",
-    thumbnail: "https://moarart.net/images/arrogant_display.jpg",
-    thumbnailWidth: 2750,
-    thumbnailHeight: 3462,
+    thumbnail: "https://moarart.net/images/arrogant_display_thumb.jpg",
+    thumbnailWidth: 397,
+    thumbnailHeight: 500,
     title: "Arrogant Display",
     medium:"Mixed Media",
     price:"$250",
@@ -145,9 +145,9 @@ const IMAGES =
   {
     id: 10,
     src: "https://moarart.net/images/at_first_glance.jpg",
-    thumbnail: "https://moarart.net/images/at_first_glance.jpg",
-    thumbnailWidth: 2553,
-    thumbnailHeight: 3243,
+    thumbnail: "https://moarart.net/images/at_first_glance_thumb.jpg",
+    thumbnailWidth: 394,
+    thumbnailHeight: 500,
     title: "At First Glance",
     medium:"Pencil",
     price:"$275",
@@ -157,9 +157,9 @@ const IMAGES =
   {
     id: 11,
     src: "https://moarart.net/images/simha.jpg",
-    thumbnail: "https://moarart.net/images/simha.jpg",
-    thumbnailWidth: 3473,
-    thumbnailHeight: 2679,
+    thumbnail: "https://moarart.net/images/simha_thumb.jpg",
+    thumbnailWidth: 648,
+    thumbnailHeight: 500,
     title: "Simha",
     medium:"Mixed Media",
     price:"$375",
@@ -169,9 +169,9 @@ const IMAGES =
   {
     id: 12,
     src: "https://moarart.net/images/the_relaxing_buddha.jpg",
-    thumbnail: "https://moarart.net/images/the_relaxing_buddha.jpg",
-    thumbnailWidth: 2564,
-    thumbnailHeight: 3287,
+    thumbnail: "https://moarart.net/images/the_relaxing_buddha_thumb.jpg",
+    thumbnailWidth: 390,
+    thumbnailHeight: 500,
     title: "The Relaxing Buddha",
     medium:"Pencil",
     price:"$450",
@@ -181,9 +181,9 @@ const IMAGES =
   {
     id: 13,
     src: "https://moarart.net/images/magnolias.jpg",
-    thumbnail: "https://moarart.net/images/magnolias.jpg",
-    thumbnailWidth: 2619,
-    thumbnailHeight: 3539,
+    thumbnail: "https://moarart.net/images/magnolias_thumb.jpg",
+    thumbnailWidth: 370,
+    thumbnailHeight: 500,
     title: "Magnolias",
     medium:"Pencil",
     price:"$200",
@@ -193,9 +193,9 @@ const IMAGES =
   {
     id: 14,
     src: "https://moarart.net/images/taal.jpg",
-    thumbnail: "https://moarart.net/images/taal.jpg",
-    thumbnailWidth: 2597,
-    thumbnailHeight: 3298,
+    thumbnail: "https://moarart.net/images/taal_thumb.jpg",
+    thumbnailWidth: 394,
+    thumbnailHeight: 500,
     title: "Taal",
     medium:"Mixed Media",
     price:"$275",
@@ -205,9 +205,9 @@ const IMAGES =
   {
     id: 15,
     src: "https://moarart.net/images/cymbolic.jpg",
-    thumbnail: "https://moarart.net/images/cymbolic.jpg",
-    thumbnailWidth: 2520,
-    thumbnailHeight: 3397,
+    thumbnail: "https://moarart.net/images/cymbolic_thumb.jpg",
+    thumbnailWidth: 371,
+    thumbnailHeight: 500,
     title: "Cymbolic",
     medium:"Pencil",
     price:"$275",
@@ -285,7 +285,7 @@ class App extends Component {
                 <img src={peacock_logo} alt="Meera"/>
               </Col>
               <Col span={8}>
-                  <Link to="/" className="menutext">
+                  <Link to="/home" className="menutext">
                     <div className="menutext">
                       Home
                     </div>
@@ -312,6 +312,7 @@ class App extends Component {
           </div>
           <div className="component">
               <Route exact path="/" component={Home}/>
+              <Route exact path="/home" component={Home}/>
               <Route path="/gallery/:medium" component={Work}/>
               <Route path="/contact" component={Contact}/>
               <Route path="/detail/:id" component={Detail}/>
@@ -355,30 +356,31 @@ class Home extends Component {
   render(){
     return(
       <Router>
-        <Row type="flex">
-          <Col sm={24} lg={12}>
-            <div>
-              <p className="contact-name">
-                Meera Alve
-                (Artist)
-              </p>
-              <img src={headshot} className="home-img"/>
-              <p className="contact-bio">
-                After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
-              </p>
-              <p className="contact-bio">
-                Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
-              </p>
-            </div>
-          </Col>
-          <Col sm={24} lg={12}>
-            {/* <Gallery images={IMAGES} enableImageSelection={false} rowHeight={300}/> */}
-            <img src={city} className="home-img"/>
-            <img src={ganapati_2} className="home-img"/>
-            <img src={ganapati_3} className="home-img"/>
+          <div className="home-div">
+            <Row type="flex">
+              <Col sm={24} lg={12} className="home-col">
+                <div>
+                  <p className="contact-name">
+                    Meera Alve
+                    (Artist)
+                  </p>
+                  <img src={headshot} className="home-img"/>
+                  <p className="contact-bio">
+                    After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
+                  </p>
+                  <p className="contact-bio">
+                    Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
+                  </p>
+                </div>
+              </Col>
+              <Col sm={24} lg={12} className="home-col">
+                <img src={city} className="home-img"/>
+                <img src={ganapati_2} className="home-img"/>
+                <img src={ganapati_3} className="home-img"/>
 
-          </Col>
-        </Row>
+              </Col>
+            </Row>
+          </div>  
       </Router>
     )
   }
