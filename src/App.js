@@ -483,12 +483,20 @@ class Detail extends Component {
     return(
       <Router>
         <div>
-          <h1 className="detail-caption">{this.img.title}</h1>
-          <img src={this.img.src} className="detail-img"/>
-          <h2 className="detail-info">Price: {this.img.price}</h2>
-          <h2 className="detail-info">Medium: {this.img.medium}</h2>
-          <h2 className="detail-info">Size: {this.img.size}</h2>
-          <h2 className="detail-info">To purchase contact <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a></h2>
+          <Row>
+            <h1 className="detail-caption">{this.img.title}</h1>
+          </Row>
+          <Row>
+            <Col sm={24} lg={12} className="detail-col">
+              <img src={this.img.src} className="detail-img"/>
+            </Col>
+            <Col sm={24} lg={12} className="detail-col">
+              <h2 className="detail-info">Size: {this.img.size}</h2>
+              <h2 className="detail-info">Medium: {this.img.medium}</h2>
+              <h2 className="detail-info">Price: {this.img.price}</h2>
+              <h2 className="detail-info">To purchase contact <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a></h2>
+            </Col>
+          </Row>
         </div>
       </Router>
     )
