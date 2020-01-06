@@ -117,8 +117,9 @@
 .contact-bio {
   font-size: 125%;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-right:50px;
+  hyphens: auto;
 }
 
 .construction {
@@ -129,8 +130,17 @@
   margin-top: 100px;
 }
 
-.menubar {
-  margin-bottom: 100px;
+/* .menubar {
+  margin-bottom: 150px;
+} */
+
+.bio-img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .home-img {
@@ -151,4 +161,11 @@
 
 .detail-col {
   margin-top: 50px;
+}
+
+.website-head {
+  margin: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 300%;
+  color: #000000;
 }

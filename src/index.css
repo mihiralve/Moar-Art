@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ccd8ff;
+  background: #9fb6ff;
 }
 
 code {
@@ -16,17 +16,17 @@ code {
 }
 
 .menubar {
-  margin:0;
+  margin-bottom: 50px;
   font-size: 18pt;
-  height: 130px;
   text-align: center;
   vertical-align: center;
 }
 
 .menutext{
-  margin-top: 20%;
-  margin-bottom: 20%;
+  margin-top: 5%;
+  /* margin-bottom: 10%; */
   color: #000000;
+  text-decoration: underline;
 }
 
 .menutext:hover {

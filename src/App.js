@@ -281,17 +281,23 @@ class App extends Component {
         <div>
           <div className="menubar">
             <Row type="flex" justify="space-between" align="top">
-              <Col span={8}>
-                <img src={peacock_logo} alt="Meera"/>
+              <Col span={24}>
+                {/* <img src={peacock_logo}/> */}
+                <a href="https://moarart.net/"><h1 className="website-head">Moar Art</h1></a>
               </Col>
-              <Col span={8}>
+            </Row>
+            <Row type="flex" justify="space-between" align="top">
+              {/* <Col span={8}>
+                <img src={peacock_logo} alt="Meera"/>
+              </Col> */}
+              <Col span={12}>
                   <Link to="/home" className="menutext">
                     <div className="menutext">
                       Home
                     </div>
                   </Link>
               </Col>
-              <Col span={8}>
+              <Col span={12}>
                   {/* <Dropdown overlay={workMenu}> */}
                     <Link to="/gallery/all">
                       <div className="menutext">
@@ -364,7 +370,7 @@ class Home extends Component {
                     Meera Alve
                     (Artist)
                   </p>
-                  <img src={headshot} className="home-img"/>
+                  <img src={headshot} className="bio-img" align="left"/>
                   <p className="contact-bio">
                     After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
                   </p>
@@ -374,9 +380,9 @@ class Home extends Component {
                 </div>
               </Col>
               <Col sm={24} lg={12} className="home-col">
-                <img src={city} className="home-img"/>
-                <img src={ganapati_2} className="home-img"/>
-                <img src={ganapati_3} className="home-img"/>
+              <a href="https://moarart.net/detail/9"><img src="https://moarart.net/images/arrogant_display.jpg" className="home-img"/></a>
+
+              <a href="https://moarart.net/detail/2"><img src="https://moarart.net/images/ganapati_3.jpg" className="home-img"/></a>
 
               </Col>
             </Row>
