@@ -3,15 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import { render } from 'react-dom';
 import Gallery from 'react-grid-gallery';
-import { Row, Col, Menu, Dropdown, Icon, Tooltip } from 'antd';
-import signature from './images/signature.png'
-import peacock from './images/peacock_feather_small.png'
-import peacock_med from './images/peacock_feather_medium.png'
-import peacock_logo from './peacock_logo.png'
-import city from './images/city.JPG'
-import ganapati_1 from './images/ganapati_1.JPG'
-import ganapati_2 from './images/ganapati_2.jpg'
-import ganapati_3 from './images/ganapati_3.jpg'
+import { Row, Col, Menu, Form } from 'antd';
+// import signature from './images/signature.png'
+// import peacock from './images/peacock_feather_small.png'
+// import peacock_med from './images/peacock_feather_medium.png'
+// import peacock_logo from './peacock_logo.png'
+// import city from './images/city.JPG'
+// import ganapati_1 from './images/ganapati_1.JPG'
+// import ganapati_2 from './images/ganapati_2.jpg'
+// import ganapati_3 from './images/ganapati_3.jpg'
 import headshot from './images/meera_headshot.jpg'
 
 
@@ -216,47 +216,45 @@ const IMAGES =
   
   ]
 
-  const LOCALIMAGES = [city, ganapati_1]
 
-
-  const workMenu = (
-    <Menu>
-      <Menu.Item>
-        <Link to="/gallery/all">
-          <div>
-            All
-          </div>
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link to="/gallery/oil">
-          <div>
-            Oil
-          </div>
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link to="/gallery/pencil">
-          <div>
-            Pencil
-          </div>
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link to="/gallery/watercolor">
-          <div>
-            Watercolor
-          </div>
-        </Link>
-      </Menu.Item><Menu.Item>
-        <Link to="/gallery/print">
-          <div>
-            Print
-          </div>
-        </Link>
-      </Menu.Item>
-    </Menu>
-  );
+  // const workMenu = (
+  //   <Menu>
+  //     <Menu.Item>
+  //       <Link to="/gallery/all">
+  //         <div>
+  //           All
+  //         </div>
+  //       </Link>
+  //     </Menu.Item>
+  //     <Menu.Item>
+  //       <Link to="/gallery/oil">
+  //         <div>
+  //           Oil
+  //         </div>
+  //       </Link>
+  //     </Menu.Item>
+  //     <Menu.Item>
+  //       <Link to="/gallery/pencil">
+  //         <div>
+  //           Pencil
+  //         </div>
+  //       </Link>
+  //     </Menu.Item>
+  //     <Menu.Item>
+  //       <Link to="/gallery/watercolor">
+  //         <div>
+  //           Watercolor
+  //         </div>
+  //       </Link>
+  //     </Menu.Item><Menu.Item>
+  //       <Link to="/gallery/print">
+  //         <div>
+  //           Print
+  //         </div>
+  //       </Link>
+  //     </Menu.Item>
+  //   </Menu>
+  // );
 
 class App extends Component {
   constructor(props){
@@ -330,25 +328,25 @@ class App extends Component {
   }
 }
 
-class Construction extends Component {
-  constructor(props){
-    super(props);
-  }
+// class Construction extends Component {
+//   constructor(props){
+//     super(props);
+//   }
 
-  changeComponent(newComponent){
-    this.props.swapComponent(newComponent);
-  }
+//   changeComponent(newComponent){
+//     this.props.swapComponent(newComponent);
+//   }
 
-  render(){
-    return(
-      <Router>
-        <div className="construction">
-          Moar Art is currrently under construction, please check back soon!
-        </div>
-      </Router>
-    )
-  }
-}
+//   render(){
+//     return(
+//       <Router>
+//         <div className="construction">
+//           Moar Art is currrently under construction, please check back soon!
+//         </div>
+//       </Router>
+//     )
+//   }
+// }
 
 class Home extends Component {
   constructor(props){
@@ -510,42 +508,42 @@ class Detail extends Component {
 
 }
 
-// Contact Page
-class Contact extends Component {
-  constructor(props){
-    super(props);
-  }
+// // Contact Page
+// class Contact extends Component {
+//   constructor(props){
+//     super(props);
+//   }
 
-  changeComponent(newComponent){
-    this.props.swapComponent(newComponent);
-  }
+//   changeComponent(newComponent){
+//     this.props.swapComponent(newComponent);
+//   }
 
-  render(){
-    return(
-      <Router>
-        <Row type="flex">
-          <Col span={12}>
-            <div>
-              <p className="contact-name">
-                Meera Alve
-                (Artist)
-              </p>
-              <p className="contact-bio">
-                After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
-              </p>
-              <p className="contact-bio">
-                Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
-              </p>
-            </div>
-          </Col>
-          <Col span={12}>
-            <Gallery images={IMAGES} enableImageSelection={false}/>
-          </Col>
-        </Row>
-      </Router>
-    )
-  }
-}
+//   render(){
+//     return(
+//       <Router>
+//         <Row type="flex">
+//           <Col span={12}>
+//             <div>
+//               <p className="contact-name">
+//                 Meera Alve
+//                 (Artist)
+//               </p>
+//               <p className="contact-bio">
+//                 After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
+//               </p>
+//               <p className="contact-bio">
+//                 Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
+//               </p>
+//             </div>
+//           </Col>
+//           <Col span={12}>
+//             <Gallery images={IMAGES} enableImageSelection={false}/>
+//           </Col>
+//         </Row>
+//       </Router>
+//     )
+//   }
+// }
 
 export default App;
 
