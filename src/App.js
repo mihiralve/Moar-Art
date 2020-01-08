@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { render } from 'react-dom';
 import Gallery from 'react-grid-gallery';
-import { Row, Col, Menu, Form } from 'antd';
+import { Row, Col, Form, Input, Button} from 'antd';
 // import signature from './images/signature.png'
 // import peacock from './images/peacock_feather_small.png'
 // import peacock_med from './images/peacock_feather_medium.png'
@@ -21,6 +21,7 @@ import {
   Link,
   Redirect
 } from 'react-router-dom';
+import { jsonToString } from 'webpack/lib/Stats';
 
 const IMAGES =
   [{
@@ -318,9 +319,10 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route exact path="/home" component={Home}/>
               <Route path="/gallery/:medium" component={Work}/>
-              <Route path="/contact" component={Contact}/>
+              {/* <Route path="/contact" component={Contact}/> */}
+              <Route path="/form" component={ContactForm}/>
               <Route path="/detail/:id" component={Detail}/>
-              <Route path="/image/:id" component={Image}/>
+              {/* <Route path="/image/:id" component={Image}/> */}
             </div>
         </div>
       </Router>
@@ -370,10 +372,10 @@ class Home extends Component {
                   </p>
                   <img src={headshot} className="bio-img" align="left"/>
                   <p className="contact-bio">
-                    After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
+                    After finishing my master’s in physics, I started my career as a telecommunication engineer, but have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani, Gond and Pichwai. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other cultures and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
                   </p>
                   <p className="contact-bio">
-                    Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
+                    Email: <a href="mailto:contact@moarart.net">contact@moarart.net</a>
                   </p>
                 </div>
               </Col>
@@ -390,20 +392,20 @@ class Home extends Component {
   }
 }
 
-class Image extends Component{
-  constructor(props){
-    super(props);
-  }
+// class Image extends Component{
+//   constructor(props){
+//     super(props);
+//   }
 
-  render(){
-    return(
-      <Router>
-        <img src={city}/>
-      </Router>
-    );
-  }
+//   render(){
+//     return(
+//       <Router>
+//         <img src={city}/>
+//       </Router>
+//     );
+//   }
 
-}
+// }
 
 // Pages showing thumbnails of all work (can be filtered by medium)
 class Work extends Component {
@@ -498,9 +500,133 @@ class Detail extends Component {
               <h2 className="detail-info">Size: {this.img.size}</h2>
               <h2 className="detail-info">Medium: {this.img.medium}</h2>
               <h2 className="detail-info">Price: {this.img.price}</h2>
-              <h2 className="detail-info">To purchase contact <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a></h2>
+              <h2 className="detail-info">To purchase contact <a href="mailto:contact@moarart.net">contact@moarart.net</a></h2>
+              <ContactForm pieceName={this.img.title}/>
             </Col>
           </Row>
+        </div>
+      </Router>
+    )
+  }
+
+}
+
+class Contact extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      formState: "0",
+      buttonText: "Submit",
+      postError:"0",
+      postResponse:0
+    }
+
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+  
+  changeComponent(newComponent){
+    this.props.swapComponent(newComponent);
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        fetch("https://api.mihiralve.com/form",{
+          method: 'POST', 
+          body: JSON.stringify(values)
+        }).then((response) => {
+          // handle HTTP response
+          if (response.status == 200){
+            this.setState({formState:"1", buttonText:"Submitted", postResponse:response, postError:"0"})
+          }
+          else{
+            this.setState({postError:"1", postResponse:response})
+          }
+        }).catch((error) => {
+          if (this.state.postResponse.status != 200) {
+            this.setState({postError:"1"})
+          }
+        });
+      }
+    });
+
+
+  }
+
+  handleChange(){
+    this.setState({formState:"0", buttonText:"Submit"})
+  }
+
+  render(){
+
+    const { getFieldDecorator } = this.props.form;
+
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 8 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 },
+      },
+    };
+
+    const { TextArea } = Input;
+    const formSubmitted = this.state.formState === '1'
+
+    return(
+      <Router>
+        <div className="contact-form">
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Item label="E-mail:">
+              {getFieldDecorator('email', {
+                rules: [
+                  {
+                    type: 'email',
+                    message: 'The input is not valid E-mail!',
+                  },
+                  {
+                    required: true,
+                    message: 'Please input your E-mail!',
+                  },
+                ],
+              })(<Input onChange={this.handleChange}/>)}
+            </Form.Item>
+            <Form.Item label="Name:">
+              {getFieldDecorator('name', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Please input your name',
+                  },
+                ],
+              })(<Input onChange={this.handleChange}/>)}
+            </Form.Item>
+            <Form.Item label="Zip Code (for shipping price estimation):">
+              {getFieldDecorator('zip_code', {
+                rules: [
+                  {
+                    required: true,
+                    message: 'Please input your zip code',
+                  },
+                ],
+              })(<Input onChange={this.handleChange}/>)}
+            </Form.Item>
+            <Form.Item>
+              {getFieldDecorator('piece_name',{initialValue: this.props.pieceName})}
+            </Form.Item>
+            <Form.Item label="Comments or Questions:">
+              {getFieldDecorator('message', {initialValue: ""})(<TextArea rows={4} onChange={this.handleChange}/>)}
+            </Form.Item>
+            <Button type="primary" htmlType="submit" disabled={formSubmitted}>{this.state.buttonText}</Button>
+            <div className="submit-error">{this.state.postError === "1" ? "Error Submitting, please try again later." : ""}</div>
+          </Form>
+          
         </div>
       </Router>
     )
@@ -545,5 +671,6 @@ class Detail extends Component {
 //   }
 // }
 
+const ContactForm = Form.create()(Contact);
 export default App;
 
