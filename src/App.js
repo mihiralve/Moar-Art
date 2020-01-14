@@ -478,7 +478,7 @@ class Home extends Component {
                 </div>
               </Col>
               <Col sm={24} lg={12} className="home-col">
-              <a href="https://moarart.net/detail/9"><img src="https://moarart.net/images/arrogant_display.jpg" className="home-img"/></a>
+              <a href="https://moarart.net/detail/23"><img src="https://moarart.net/images/moar.jpg" className="home-img"/></a>
 
               <a href="https://moarart.net/detail/2"><img src="https://moarart.net/images/ganapati_3.jpg" className="home-img"/></a>
 
