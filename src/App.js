@@ -316,45 +316,6 @@ const IMAGES =
   ]
 
 
-  // const workMenu = (
-  //   <Menu>
-  //     <Menu.Item>
-  //       <Link to="/gallery/all">
-  //         <div>
-  //           All
-  //         </div>
-  //       </Link>
-  //     </Menu.Item>
-  //     <Menu.Item>
-  //       <Link to="/gallery/oil">
-  //         <div>
-  //           Oil
-  //         </div>
-  //       </Link>
-  //     </Menu.Item>
-  //     <Menu.Item>
-  //       <Link to="/gallery/pencil">
-  //         <div>
-  //           Pencil
-  //         </div>
-  //       </Link>
-  //     </Menu.Item>
-  //     <Menu.Item>
-  //       <Link to="/gallery/watercolor">
-  //         <div>
-  //           Watercolor
-  //         </div>
-  //       </Link>
-  //     </Menu.Item><Menu.Item>
-  //       <Link to="/gallery/print">
-  //         <div>
-  //           Print
-  //         </div>
-  //       </Link>
-  //     </Menu.Item>
-  //   </Menu>
-  // );
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -379,14 +340,10 @@ class App extends Component {
           <div className="menubar">
             <Row type="flex" justify="space-between" align="top">
               <Col span={24}>
-                {/* <img src={peacock_logo}/> */}
                 <a href="https://moarart.net/"><h1 className="website-head">Moar Art</h1></a>
               </Col>
             </Row>
             <Row type="flex" justify="space-between" align="top">
-              {/* <Col span={8}>
-                <img src={peacock_logo} alt="Meera"/>
-              </Col> */}
               <Col span={12}>
                   <Link to="/home" className="menutext">
                     <div className="menutext">
@@ -395,58 +352,26 @@ class App extends Component {
                   </Link>
               </Col>
               <Col span={12}>
-                  {/* <Dropdown overlay={workMenu}> */}
                     <Link to="/gallery/all">
                       <div className="menutext">
-                        {/* Work <Icon type="down"/> */}
                         Gallery
                       </div>
                     </Link>
-                  {/* </Dropdown> */}
               </Col>
-              {/* <Col span={6}>
-                  <Link to="/contact" className="menutext">
-                    <div className="menutext">
-                      Contact
-                    </div>
-                  </Link>
-              </Col> */}
             </Row>
           </div>
           <div className="component">
               <Route exact path="/" component={Home}/>
               <Route exact path="/home" component={Home}/>
               <Route path="/gallery/:medium" component={Work}/>
-              {/* <Route path="/contact" component={Contact}/> */}
               <Route path="/form" component={ContactForm}/>
               <Route path="/detail/:id" component={Detail}/>
-              {/* <Route path="/image/:id" component={Image}/> */}
             </div>
         </div>
       </Router>
     );
   }
 }
-
-// class Construction extends Component {
-//   constructor(props){
-//     super(props);
-//   }
-
-//   changeComponent(newComponent){
-//     this.props.swapComponent(newComponent);
-//   }
-
-//   render(){
-//     return(
-//       <Router>
-//         <div className="construction">
-//           Moar Art is currrently under construction, please check back soon!
-//         </div>
-//       </Router>
-//     )
-//   }
-// }
 
 class Home extends Component {
   constructor(props){
@@ -490,20 +415,6 @@ class Home extends Component {
   }
 }
 
-// class Image extends Component{
-//   constructor(props){
-//     super(props);
-//   }
-
-//   render(){
-//     return(
-//       <Router>
-//         <img src={city}/>
-//       </Router>
-//     );
-//   }
-
-// }
 
 // Pages showing thumbnails of all work (can be filtered by medium)
 class Work extends Component {
@@ -731,43 +642,6 @@ class Contact extends Component {
   }
 
 }
-
-// // Contact Page
-// class Contact extends Component {
-//   constructor(props){
-//     super(props);
-//   }
-
-//   changeComponent(newComponent){
-//     this.props.swapComponent(newComponent);
-//   }
-
-//   render(){
-//     return(
-//       <Router>
-//         <Row type="flex">
-//           <Col span={12}>
-//             <div>
-//               <p className="contact-name">
-//                 Meera Alve
-//                 (Artist)
-//               </p>
-//               <p className="contact-bio">
-//                 After finishing my master’s in physics, I started my career as a telecommunication engineer, but I have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani and Gond. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other artists, cultures, and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
-//               </p>
-//               <p className="contact-bio">
-//                 Email: <a href="mailto:MeeraAlve@gmail.com">MeeraAlve@gmail.com</a>
-//               </p>
-//             </div>
-//           </Col>
-//           <Col span={12}>
-//             <Gallery images={IMAGES} enableImageSelection={false}/>
-//           </Col>
-//         </Row>
-//       </Router>
-//     )
-//   }
-// }
 
 const ContactForm = Form.create()(Contact);
 export default App;
