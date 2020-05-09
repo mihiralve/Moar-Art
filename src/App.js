@@ -19,7 +19,8 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Redirect
+  Redirect, 
+  withRouter
 } from 'react-router-dom';
 import { jsonToString } from 'webpack/lib/Stats';
 
@@ -361,12 +362,12 @@ class App extends Component {
             </Row>
           </div>
           <div className="component">
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/home" component={Home}/>
-              <Route path="/gallery/:medium" component={Work}/>
-              <Route path="/gallery2/:medium" component={Work2}/>
-              <Route path="/form" component={ContactForm}/>
-              <Route path="/detail/:id" component={Detail}/>
+              <Route exact path="/" component={withRouter(Home)}/>
+              <Route exact path="/home" component={withRouter(Home)}/>
+              <Route path="/gallery/:medium" component={withRouter(Work)}/>
+              <Route path="/gallery2/:medium" component={withRouter(Work2)}/>
+              <Route path="/form" component={withRouter(ContactForm)}/>
+              <Route path="/detail/:id" component={withRouter(Detail)}/>
             </div>
         </div>
       </Router>
@@ -583,7 +584,7 @@ class Gallery2 extends Component{
     }
 
     // add 4 to width to leave room for the margins
-    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth}/>, width:imgWidth+6}
+    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:imgWidth+6}
   }
 
   renderGallery(){
@@ -614,11 +615,9 @@ class Gallery2 extends Component{
 
   render(){
     return(
-      <Router>
         <div id="gallery" className="gallery">
           {this.renderGallery().map((rows) => <div className="gallery-row">{rows.map((img) => <div className="gallery-img">{img}</div>)}</div>)}
         </div>
-      </Router>
     )
   }
 }
