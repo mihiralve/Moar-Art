@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { render } from 'react-dom';
-import Gallery from 'react-grid-gallery';
 import { Row, Col, Form, Input, Button} from 'antd';
 // import signature from './images/signature.png'
 // import peacock from './images/peacock_feather_small.png'
@@ -365,7 +364,6 @@ class App extends Component {
               <Route exact path="/" component={withRouter(Home)}/>
               <Route exact path="/home" component={withRouter(Home)}/>
               <Route path="/gallery/:medium" component={withRouter(Work)}/>
-              <Route path="/gallery2/:medium" component={withRouter(Work2)}/>
               <Route path="/form" component={withRouter(ContactForm)}/>
               <Route path="/detail/:id" component={withRouter(Detail)}/>
             </div>
@@ -416,7 +414,6 @@ class Home extends Component {
     )
   }
 }
-
 
 // Pages showing thumbnails of all work (can be filtered by medium)
 class Work extends Component {
@@ -472,7 +469,7 @@ class Work extends Component {
     return(
       <Router>
           <div>
-            <Gallery images={filteredImages} enableLightbox={false} enableImageSelection={false} onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
+            <Gallery images={filteredImages}  onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
             <div>{emptyMessage}</div>
           </div>
       </Router>
@@ -480,69 +477,7 @@ class Work extends Component {
   }
 }
 
-// Pages showing thumbnails of all work (can be filtered by medium)
-class Work2 extends Component {
-  constructor(props){
-    super(props);
-    this.getImages = this.getImages.bind(this);
-    this.filterImages = this.filterImages.bind(this);
-    this.loadImage = this.loadImage.bind(this);
-
-    this.state = {
-      toDetail: false,
-      toDetailId: -1
-    }
-  }
-
-  changeComponent(newComponent){
-    this.props.swapComponent(newComponent);
-  }
-
-  // filter images by medium
-  filterImages(image){
-    return image["medium"].toLowerCase() === this.props.match.params.medium.toLowerCase()
-  }
-
-  // Either return all images or call filterImages
-  getImages(){
-
-    if (this.props.match.params.medium === "all") {
-      return IMAGES;
-    } else {
-      return IMAGES.filter(this.filterImages)
-    }
-  }
-
-  loadImage(ind){
-
-    this.setState({toDetail:true, toDetailId:this.getImages()[ind].id})
-
-  }
-
-  render(){
-
-    if (this.state.toDetail === true){
-      return <Redirect to={'/detail/' + this.state.toDetailId} />
-    }
-
-    var filteredImages = this.getImages();
-    var emptyMessage = "";
-    if (filteredImages.length === 0) {
-      emptyMessage = "No Images to Display.";
-    }
-
-    return(
-      <Router>
-          <div>
-            <Gallery2 images={filteredImages}  onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
-            <div>{emptyMessage}</div>
-          </div>
-      </Router>
-    )
-  }
-}
-
-class Gallery2 extends Component{
+class Gallery extends Component{
   constructor(props){
     super(props);
     this.state = { width: 0, height: 0 };
