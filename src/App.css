@@ -187,3 +187,18 @@
   display: inline;
   margin-left: 10px;
 }
+
+.gallery {
+  text-align: center;
+}
+
+.gallery-row {
+  display: inline-block;
+  margin: 0 auto;
+  
+}
+
+.gallery-img {
+  display: inline-block;
+  margin: 3px;
+}

@@ -364,6 +364,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route exact path="/home" component={Home}/>
               <Route path="/gallery/:medium" component={Work}/>
+              <Route path="/gallery2/:medium" component={Work2}/>
               <Route path="/form" component={ContactForm}/>
               <Route path="/detail/:id" component={Detail}/>
             </div>
@@ -473,6 +474,150 @@ class Work extends Component {
             <Gallery images={filteredImages} enableLightbox={false} enableImageSelection={false} onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
             <div>{emptyMessage}</div>
           </div>
+      </Router>
+    )
+  }
+}
+
+// Pages showing thumbnails of all work (can be filtered by medium)
+class Work2 extends Component {
+  constructor(props){
+    super(props);
+    this.getImages = this.getImages.bind(this);
+    this.filterImages = this.filterImages.bind(this);
+    this.loadImage = this.loadImage.bind(this);
+
+    this.state = {
+      toDetail: false,
+      toDetailId: -1
+    }
+  }
+
+  changeComponent(newComponent){
+    this.props.swapComponent(newComponent);
+  }
+
+  // filter images by medium
+  filterImages(image){
+    return image["medium"].toLowerCase() === this.props.match.params.medium.toLowerCase()
+  }
+
+  // Either return all images or call filterImages
+  getImages(){
+
+    if (this.props.match.params.medium === "all") {
+      return IMAGES;
+    } else {
+      return IMAGES.filter(this.filterImages)
+    }
+  }
+
+  loadImage(ind){
+
+    this.setState({toDetail:true, toDetailId:this.getImages()[ind].id})
+
+  }
+
+  render(){
+
+    if (this.state.toDetail === true){
+      return <Redirect to={'/detail/' + this.state.toDetailId} />
+    }
+
+    var filteredImages = this.getImages();
+    var emptyMessage = "";
+    if (filteredImages.length === 0) {
+      emptyMessage = "No Images to Display.";
+    }
+
+    return(
+      <Router>
+          <div>
+            <Gallery2 images={filteredImages}  onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
+            <div>{emptyMessage}</div>
+          </div>
+      </Router>
+    )
+  }
+}
+
+class Gallery2 extends Component{
+  constructor(props){
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  changeComponent(newComponent){
+    this.props.swapComponent(newComponent);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: document.getElementById('gallery').clientWidth, height: document.getElementById('gallery').clientHeight });
+  }
+
+  renderImage(img){
+
+    let imgHeight = this.props.rowHeight;
+    let imgWidth = (this.props.rowHeight/img.thumbnailHeight) * img.thumbnailWidth;
+
+    if (this.state.width != 0 && imgWidth > this.state.width){
+      console.log(this.state.width)
+      console.log(imgHeight)
+      console.log(imgWidth)
+
+      imgHeight = (this.state.width/imgWidth) * imgHeight;
+      imgWidth = this.state.width;
+     
+      console.log(imgHeight)
+      console.log(imgWidth)
+    }
+
+    // add 4 to width to leave room for the margins
+    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth}/>, width:imgWidth+6}
+  }
+
+  renderGallery(){
+
+    let images = this.props.images;
+    
+
+    let rows = [];
+    let row = [];
+    let rowSpace = this.state.width;
+
+    for (var i=0; i < images.length; i++){
+      let rendered = this.renderImage(images[i])
+      if (rendered.width < rowSpace){
+        row.push(rendered.img);
+        rowSpace -= rendered.width;
+      } else {
+        rows.push(row);
+        row = [];
+        row.push(rendered.img);
+        rowSpace = this.state.width-rendered.width;
+      }
+    }
+
+    return rows
+
+  }
+
+  render(){
+    return(
+      <Router>
+        <div id="gallery" className="gallery">
+          {this.renderGallery().map((rows) => <div className="gallery-row">{rows.map((img) => <div className="gallery-img">{img}</div>)}</div>)}
+        </div>
       </Router>
     )
   }
