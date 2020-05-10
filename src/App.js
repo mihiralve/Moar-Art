@@ -1,19 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { render } from 'react-dom';
 import { Row, Col, Form, Input, Button} from 'antd';
-// import signature from './images/signature.png'
-// import peacock from './images/peacock_feather_small.png'
-// import peacock_med from './images/peacock_feather_medium.png'
-// import peacock_logo from './peacock_logo.png'
-// import city from './images/city.JPG'
-// import ganapati_1 from './images/ganapati_1.JPG'
-// import ganapati_2 from './images/ganapati_2.jpg'
-// import ganapati_3 from './images/ganapati_3.jpg'
 import headshot from './images/meera_headshot.jpg'
-
-
 import {
   BrowserRouter as Router,
   Route,
@@ -21,7 +9,6 @@ import {
   Redirect, 
   withRouter
 } from 'react-router-dom';
-import { jsonToString } from 'webpack/lib/Stats';
 
 const IMAGES =
   [
