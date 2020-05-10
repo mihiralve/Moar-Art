@@ -1,27 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { render } from 'react-dom';
-import Gallery from 'react-grid-gallery';
 import { Row, Col, Form, Input, Button} from 'antd';
-// import signature from './images/signature.png'
-// import peacock from './images/peacock_feather_small.png'
-// import peacock_med from './images/peacock_feather_medium.png'
-// import peacock_logo from './peacock_logo.png'
-// import city from './images/city.JPG'
-// import ganapati_1 from './images/ganapati_1.JPG'
-// import ganapati_2 from './images/ganapati_2.jpg'
-// import ganapati_3 from './images/ganapati_3.jpg'
 import headshot from './images/meera_headshot.jpg'
-
-
 import {
   BrowserRouter as Router,
   Route,
   Link,
-  Redirect
+  Redirect, 
+  withRouter
 } from 'react-router-dom';
-import { jsonToString } from 'webpack/lib/Stats';
 
 const IMAGES =
   [
@@ -361,11 +348,11 @@ class App extends Component {
             </Row>
           </div>
           <div className="component">
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/home" component={Home}/>
-              <Route path="/gallery/:medium" component={Work}/>
-              <Route path="/form" component={ContactForm}/>
-              <Route path="/detail/:id" component={Detail}/>
+              <Route exact path="/" component={withRouter(Home)}/>
+              <Route exact path="/home" component={withRouter(Home)}/>
+              <Route path="/gallery/:medium" component={withRouter(Work)}/>
+              <Route path="/form" component={withRouter(ContactForm)}/>
+              <Route path="/detail/:id" component={withRouter(Detail)}/>
             </div>
         </div>
       </Router>
@@ -414,7 +401,6 @@ class Home extends Component {
     )
   }
 }
-
 
 // Pages showing thumbnails of all work (can be filtered by medium)
 class Work extends Component {
@@ -470,10 +456,90 @@ class Work extends Component {
     return(
       <Router>
           <div>
-            <Gallery images={filteredImages} enableLightbox={false} enableImageSelection={false} onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
+            <Gallery images={filteredImages}  onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
             <div>{emptyMessage}</div>
           </div>
       </Router>
+    )
+  }
+}
+
+class Gallery extends Component{
+  constructor(props){
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  changeComponent(newComponent){
+    this.props.swapComponent(newComponent);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: document.getElementById('gallery').clientWidth, height: document.getElementById('gallery').clientHeight });
+  }
+
+  renderImage(img){
+
+    let imgHeight = this.props.rowHeight;
+    let imgWidth = (this.props.rowHeight/img.thumbnailHeight) * img.thumbnailWidth;
+
+    if (this.state.width != 0 && imgWidth > this.state.width){
+      console.log(this.state.width)
+      console.log(imgHeight)
+      console.log(imgWidth)
+
+      imgHeight = (this.state.width/imgWidth) * imgHeight;
+      imgWidth = this.state.width;
+     
+      console.log(imgHeight)
+      console.log(imgWidth)
+    }
+
+    // add 4 to width to leave room for the margins
+    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:imgWidth+6}
+  }
+
+  renderGallery(){
+
+    let images = this.props.images;
+    
+
+    let rows = [];
+    let row = [];
+    let rowSpace = this.state.width;
+
+    for (var i=0; i < images.length; i++){
+      let rendered = this.renderImage(images[i])
+      if (rendered.width < rowSpace){
+        row.push(rendered.img);
+        rowSpace -= rendered.width;
+      } else {
+        rows.push(row);
+        row = [];
+        row.push(rendered.img);
+        rowSpace = this.state.width-rendered.width;
+      }
+    }
+
+    return rows
+
+  }
+
+  render(){
+    return(
+        <div id="gallery" className="gallery">
+          {this.renderGallery().map((rows) => <div className="gallery-row">{rows.map((img) => <div className="gallery-img">{img}</div>)}</div>)}
+        </div>
     )
   }
 }
