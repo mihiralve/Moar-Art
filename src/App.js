@@ -21,7 +21,8 @@ const IMAGES =
       title: "Baby Ganesha",
       medium:"Colored Pencil",
       price:"Sold ($350)",
-      size: "8x10"
+      size: "8x10",
+      sold: true
     },
 
     {
@@ -33,7 +34,8 @@ const IMAGES =
       title: "Zen Ganesh",
       medium:"Mixed Media",
       price:"Sold ($200)",
-      size: "8x10"
+      size: "8x10",
+      sold: true
     },
 
     {
@@ -45,7 +47,8 @@ const IMAGES =
       title: "Blessings",
       medium:"Pastel",
       price:"Sold ($2000)",
-      size: "20x28"
+      size: "20x28",
+      sold: true
     },
 
     {
@@ -56,8 +59,9 @@ const IMAGES =
       thumbnailHeight: 500,
       title: "Tree of Life",
       medium:"Mixed Media",
-      price:"$800",
-      size: "16x20"
+      price:"Sold ($800)",
+      size: "16x20",
+      sold: true
     },
 
     {
@@ -69,7 +73,8 @@ const IMAGES =
       title: "Pensive Buddha",
       medium:"Mixed Media",
       price:"$600",
-      size: "12x16"
+      size: "12x16",
+      sold: false
     },
 
     {
@@ -81,7 +86,8 @@ const IMAGES =
       title: "Budding",
       medium:"Mixed Media",
       price:"$450",
-      size: "12x18"
+      size: "12x18",
+      sold: false
     },
 
     {
@@ -93,7 +99,8 @@ const IMAGES =
       title: "Blauet",
       medium:"Colored Pencil",
       price:"$350",
-      size: "8x10"
+      size: "8x10",
+      sold: false
     },
 
     {
@@ -105,7 +112,8 @@ const IMAGES =
       title: "Oriental Beauty",
       medium:"Colored Pencil",
       price:"$350",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -117,7 +125,8 @@ const IMAGES =
       title: "Gallant Fowl",
       medium:"Mixed Media",
       price:"$175",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -129,7 +138,8 @@ const IMAGES =
       title: "Arrogant Display",
       medium:"Mixed Media",
       price:"$250",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -141,7 +151,8 @@ const IMAGES =
       title: "At First Glance",
       medium:"Colored Pencil",
       price:"$275",
-      size:"9x11"
+      size:"9x11",
+      sold: false
     },
 
     {
@@ -153,7 +164,8 @@ const IMAGES =
       title: "Simha",
       medium:"Mixed Media",
       price:"$375",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -165,7 +177,8 @@ const IMAGES =
       title: "The Relaxing Buddha",
       medium:"Colored Pencil",
       price:"$450",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -177,7 +190,8 @@ const IMAGES =
       title: "Magnolias",
       medium:"Colored Pencil",
       price:"$200",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -189,7 +203,8 @@ const IMAGES =
       title: "Taal",
       medium:"Mixed Media",
       price:"$275",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -201,7 +216,8 @@ const IMAGES =
       title: "Cymbolic",
       medium:"Colored Pencil",
       price:"$275",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -213,7 +229,8 @@ const IMAGES =
       title: "Matsya",
       medium:"Mixed Media",
       price:"$800",
-      size:"12x16"
+      size:"12x16",
+      sold: false
     },
 
     {
@@ -225,7 +242,8 @@ const IMAGES =
       title: "Tree of Life",
       medium:"Mixed Media",
       price:"Held for show",
-      size:"12x16"
+      size:"12x16",
+      sold: false
     },
 
     {
@@ -237,7 +255,8 @@ const IMAGES =
       title: "Moksha",
       medium:"Colored Pencil",
       price:"$1500",
-      size:"11x14"
+      size:"11x14",
+      sold: false
     },
 
     {
@@ -249,7 +268,8 @@ const IMAGES =
       title: "Peaches",
       medium:"Mixed Media",
       price:"$120",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -261,7 +281,8 @@ const IMAGES =
       title: "Perched",
       medium:"Colored Pencel",
       price:"$75",
-      size:"8x10"
+      size:"8x10",
+      sold: false
     },
 
     {
@@ -273,7 +294,8 @@ const IMAGES =
       title: "The Couple",
       medium:"Pastels",
       price:"Sold",
-      size:"10x13 Each"
+      size:"10x13 Each",
+      sold: false
     },
 
     {
@@ -285,7 +307,8 @@ const IMAGES =
       title: "Sunrise",
       medium:"Oil",
       price:"Sold",
-      size:"30x40"
+      size:"30x40",
+      sold: false
     },
 
     {
@@ -297,7 +320,8 @@ const IMAGES =
       title: "Moar",
       medium:"Oil",
       price:"Sold",
-      size:"18x18"
+      size:"18x18",
+      sold: false
     },
   
   ]
@@ -550,6 +574,7 @@ class Detail extends Component {
     super(props);
 
     this.img = this.getImage(this.props.match.params.id)
+    this.checkSold = this.checkSold.bind(this)
   }
 
   changeComponent(newComponent){
@@ -558,6 +583,17 @@ class Detail extends Component {
 
   getImage(id){
     return IMAGES[id]
+  }
+
+  checkSold(){
+    if (!this.img.sold){
+      return(
+        <div>
+          <h2 className="detail-info">For inquiries email <a href="mailto:contact@moarart.net">contact@moarart.net</a> or fill out the form below.</h2>
+          <ContactForm pieceName={this.img.title}/>
+        </div>
+      )
+    }
   }
 
   render(){
@@ -575,8 +611,7 @@ class Detail extends Component {
               <h2 className="detail-info">Size: {this.img.size}</h2>
               <h2 className="detail-info">Medium: {this.img.medium}</h2>
               <h2 className="detail-info">Price: {this.img.price}</h2>
-              <h2 className="detail-info">To purchase contact <a href="mailto:contact@moarart.net">contact@moarart.net</a></h2>
-              <ContactForm pieceName={this.img.title}/>
+              {this.checkSold()}
             </Col>
           </Row>
         </div>
