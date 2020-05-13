@@ -11,6 +11,8 @@ import {
   withRouter
 } from 'react-router-dom';
 
+const BASE_URL = "https://moarart.net/"
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -260,6 +262,8 @@ class Detail extends Component {
 
     this.img = this.getImage(this.props.match.params.id)
     this.checkSold = this.checkSold.bind(this)
+    this.getPrevButton = this.getPrevButton.bind(this);
+    this.getNextButton = this.getNextButton.bind(this);
   }
 
   changeComponent(newComponent){
@@ -281,16 +285,53 @@ class Detail extends Component {
     }
   }
 
+  // Show previous button as long as it is not the first image in the gallery
+  getPrevButton(){
+    if (this.img.id > 0){
+      return(
+        // <Col sm={2} lg={3} className="detail-arrow">
+              <a href={BASE_URL + "detail/" + String(this.img.id-1)} className="detail-arrow"><h1 className="detail-button">&larr;</h1></a>
+        // </Col>
+      );
+    } 
+    // else {
+    //   return(
+    //       <Col sm={2} lg={3} className="detail-arrow"><h1></h1></Col>
+    //   );
+    // }
+  }
+
+  // Show next button as long as it is not the last image in the gallery
+  getNextButton(){
+    if (this.img.id < IMAGES.length-1){
+      return(
+        // <Col sm={2} lg={3} className="detail-arrow">
+              <a href={BASE_URL + "detail/" + String(this.img.id+1)} className="detail-arrow"><h1 className="detail-button">&rarr;</h1></a>
+        // </Col>
+      );
+    } 
+    // else {
+    //   return(
+    //       <Col sm={2} lg={3} className="detail-arrow"><h1></h1></Col>
+    //   );
+    // }
+  }
+
   render(){
     return(
       <Router>
         <div>
           <Row>
+          {/* {this.getPrevButton()} */}
+          {/* <Col sm={18} lg={12}> */}
             <h1 className="detail-caption">{this.img.title}</h1>
+          {/* </Col> */}
+          {/* {this.getNextButton()} */}
           </Row>
           <Row>
             <Col sm={24} lg={12} className="detail-col">
               <img src={this.img.src} className="detail-img"/>
+              <div className="detail-arrow-container">{this.getPrevButton()}{this.getNextButton()}</div>
             </Col>
             <Col sm={24} lg={12} className="detail-col">
               <h2 className="detail-info">Size: {this.img.size}</h2>
