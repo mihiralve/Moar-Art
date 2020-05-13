@@ -238,6 +238,7 @@ class Gallery extends Component{
         rowSpace = this.state.width-rendered.width;
       }
     }
+    rows.push(row)
 
     return rows
 
