@@ -230,7 +230,7 @@
       "medium":"Mixed Media",
       "price":"Held for show",
       "size":"12x16",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -309,5 +309,109 @@
       "price":"Sold",
       "size":"18x18",
       "sold": false
+    },
+
+    {
+      "id": 24,
+      "src": "https://moarart.net/images/a_pair_of_cranes.jpg",
+      "thumbnail": "https://moarart.net/images/a_pair_of_cranes_thumb.jpg",
+      "thumbnailWidth": 377,
+      "thumbnailHeight": 500,
+      "title": "A Pair of Cranes",
+      "medium": "Mixed Media",
+      "price": "Held for Show",
+      "size": "5x7",
+      "sold": true
+    },
+
+    {
+      "id": 25,
+      "src": "https://moarart.net/images/the_lotus_pond.jpg",
+      "thumbnail": "https://moarart.net/images/the_lotus_pond_thumb.jpg",
+      "thumbnailWidth": 635,
+      "thumbnailHeight": 500,
+      "title": "The Lotus Pond",
+      "medium": "Mixed Media",
+      "price": "Held for Show",
+      "size": "6x8",
+      "sold": true
+    },
+
+    {
+      "id": 26,
+      "src": "https://moarart.net/images/duulhan.jpg",
+      "thumbnail": "https://moarart.net/images/duulhan_thumb.jpg",
+      "thumbnailWidth": 382,
+      "thumbnailHeight": 500,
+      "title": "Duulhan",
+      "medium": "Colored Pencil",
+      "price":"Held for Show",
+      "size": "5x7",
+      "sold": true
+    },
+
+    {
+      "id": 27,
+      "src": "https://moarart.net/images/nandi.jpg",
+      "thumbnail": "https://moarart.net/images/nandi_thumb.jpg",
+      "thumbnailWidth": 377,
+      "thumbnailHeight": 500,
+      "title": "Nandi",
+      "medium": "Mixed Media",
+      "price": "Held for Show",
+      "size": "5x7",
+      "sold": true
+    },
+
+    {
+      "id": 28,
+      "src": "https://moarart.net/images/haar.jpg",
+      "thumbnail": "https://moarart.net/images/haar_thumb.jpg",
+      "thumbnailWidth": 382,
+      "thumbnailHeight": 500,
+      "title": "Haar",
+      "medium": "Colored Pencil",
+      "price": "Held for Show",
+      "size": "6x8",
+      "sold": true
+    },
+
+    {
+      "id": 29,
+      "src": "https://moarart.net/images/mor.jpg",
+      "thumbnail": "https://moarart.net/images/mor_thumb.jpg",
+      "thumbnailWidth": 387,
+      "thumbnailHeight": 500,
+      "title": "Mor",
+      "medium": "Mixed Media",
+      "price": "Held for Show",
+      "size": "6x8",
+      "sold": true
+    },
+
+    {
+      "id": 30,
+      "src": "https://moarart.net/images/krishna.jpg",
+      "thumbnail": "https://moarart.net/images/krishna_thumb.jpg",
+      "thumbnailWidth": 369,
+      "thumbnailHeight": 500,
+      "title": "Krishna",
+      "medium": "Colored Pencil",
+      "price": "Held for Show",
+      "size": "6x8",
+      "sold": true
+    },
+
+    {
+      "id": 31,
+      "src": "https://moarart.net/images/ashwa.jpg",
+      "thumbnail": "https://moarart.net/images/ashwa_thumb.jpg",
+      "thumbnailWidth": 664,
+      "thumbnailHeight": 500,
+      "title": "Ashwa",
+      "medium": "Colored Pencil",
+      "price": "Held for Show",
+      "size": "8x10",
+      "sold": true
     }
 ]
