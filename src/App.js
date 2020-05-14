@@ -207,15 +207,8 @@ class Gallery extends Component{
     let imgWidth = (this.props.rowHeight/img.thumbnailHeight) * img.thumbnailWidth;
 
     if (this.state.width != 0 && imgWidth > this.state.width){
-      console.log(this.state.width)
-      console.log(imgHeight)
-      console.log(imgWidth)
-
       imgHeight = (this.state.width/imgWidth) * imgHeight;
       imgWidth = this.state.width;
-     
-      console.log(imgHeight)
-      console.log(imgWidth)
     }
 
     let margin = 10; 
