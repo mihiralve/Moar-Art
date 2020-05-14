@@ -218,8 +218,11 @@ class Gallery extends Component{
       console.log(imgWidth)
     }
 
-    // add 20 to width to leave room for the 5px margins on either side and the 5px borders
-    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:imgWidth+20}
+    let margin = 10; 
+    let border = 5;
+    let fullWidth = imgWidth + 2*(margin + border)
+
+    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:fullWidth}
   }
 
   renderGallery(){
