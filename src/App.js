@@ -10,6 +10,8 @@ import {
   Redirect, 
   withRouter
 } from 'react-router-dom';
+import { createBrowserHistory } from 'history'
+const history = createBrowserHistory()
 
 class App extends Component {
   constructor(props){
@@ -30,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div>
           <div className="menubar">
             <Row type="flex" justify="space-between" align="top">
@@ -79,7 +81,7 @@ class Home extends Component {
 
   render(){
     return(
-      <Router>
+      <Router history={history}>
           <div className="home-div">
             <Row type="flex">
               <Col sm={24} lg={12} className="home-col">
@@ -152,6 +154,7 @@ class Work extends Component {
   render(){
 
     if (this.state.toDetail === true){
+      history.push("/gallery/" + this.props.match.params.medium.toLowerCase())
       return <Redirect to={'/detail/' + this.state.toDetailId} />
     }
 
@@ -162,7 +165,7 @@ class Work extends Component {
     }
 
     return(
-      <Router>
+      <Router history={history}>
           <div>
             <Gallery images={filteredImages}  onClickThumbnail={(ind) => this.loadImage(ind)} rowHeight={300}/>
             <div>{emptyMessage}</div>
@@ -257,7 +260,6 @@ class Gallery extends Component{
 class Detail extends Component {
   constructor(props){
     super(props);
-
     this.img = this.getImage(this.props.match.params.id)
     this.checkSold = this.checkSold.bind(this)
   }
@@ -283,7 +285,7 @@ class Detail extends Component {
 
   render(){
     return(
-      <Router>
+      <Router history={history}>
         <div>
           <Row>
             <h1 className="detail-caption">{this.img.title}</h1>
@@ -375,7 +377,7 @@ class Contact extends Component {
     const formSubmitted = this.state.formState === '1'
 
     return(
-      <Router>
+      <Router history={history}>
         <div className="contact-form">
           <Form onSubmit={this.handleSubmit}>
             <Form.Item label="E-mail:">
