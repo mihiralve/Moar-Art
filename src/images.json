@@ -40,32 +40,45 @@
 
     {
       "id": 3,
+      "src": "https://moarart.net/images/taal.jpg",
+      "thumbnail": "https://moarart.net/images/taal_thumb.jpg",
+      "thumbnailWidth": 394,
+      "thumbnailHeight": 500,
+      "title": "Taal",
+      "medium":"Mixed Media",
+      "price":"$275",
+      "size":"8x10",
+      "sold": false
+    },
+
+    {
+      "id": 4,
+      "src": "https://moarart.net/images/cymbolic.jpg",
+      "thumbnail": "https://moarart.net/images/cymbolic_thumb.jpg",
+      "thumbnailWidth": 371,
+      "thumbnailHeight": 500,
+      "title": "Cymbolic",
+      "medium":"Colored Pencil",
+      "price":"$275",
+      "size":"8x10",
+      "sold": false
+    },
+
+    {
+      "id": 5,
       "src": "https://moarart.net/images/tree_of_life_1.jpg",
       "thumbnail": "https://moarart.net/images/tree_of_life_1_thumb.jpg",
       "thumbnailWidth": 410,
       "thumbnailHeight": 500,
       "title": "Tree of Life",
       "medium":"Mixed Media",
-      "price":"Held for show",
+      "price":"Held for show ($800)",
       "size": "16x20",
       "sold": true
     },
 
     {
-      "id": 4,
-      "src": "https://moarart.net/images/pensive_buddha.jpg",
-      "thumbnail": "https://moarart.net/images/pensive_buddha_thumb.jpg",
-      "thumbnailWidth": 400,
-      "thumbnailHeight": 500,
-      "title": "Pensive Buddha",
-      "medium":"Mixed Media",
-      "price":"$600",
-      "size": "12x16",
-      "sold": false
-    },
-
-    {
-      "id": 5,
+      "id": 6,
       "src": "https://moarart.net/images/tree_of_life_3.jpg",
       "thumbnail": "https://moarart.net/images/tree_of_life_3_thumb.jpg",
       "thumbnailWidth": 329,
@@ -78,67 +91,54 @@
     },
 
     {
-      "id": 6,
-      "src": "https://moarart.net/images/blauet.jpg",
-      "thumbnail": "https://moarart.net/images/blauet_thumb.jpg",
-      "thumbnailWidth": 370,
-      "thumbnailHeight": 500,
-      "title": "Blauet",
-      "medium":"Colored Pencil",
-      "price":"$350",
-      "size": "8x10",
-      "sold": false
-    },
-
-    {
       "id": 7,
-      "src": "https://moarart.net/images/oriental_beauty.jpg",
-      "thumbnail": "https://moarart.net/images/oriental_beauty_thumb.jpg",
-      "thumbnailWidth": 386,
+      "src": "https://moarart.net/images/tree_of_life_2.jpg",
+      "thumbnail": "https://moarart.net/images/tree_of_life_2_thumb.jpg",
+      "thumbnailWidth": 389,
       "thumbnailHeight": 500,
-      "title": "Oriental Beauty",
-      "medium":"Colored Pencil",
-      "price":"$350",
-      "size":"8x10",
-      "sold": false
+      "title": "Tree of Life",
+      "medium":"Mixed Media",
+      "price":"Sold ($600)",
+      "size":"12x16",
+      "sold": true
     },
 
     {
       "id": 8,
-      "src": "https://moarart.net/images/gallant_fowl.jpg",
-      "thumbnail": "https://moarart.net/images/gallant_fowl_thumb.jpg",
-      "thumbnailWidth": 642,
+      "src": "https://moarart.net/images/pensive_buddha.jpg",
+      "thumbnail": "https://moarart.net/images/pensive_buddha_thumb.jpg",
+      "thumbnailWidth": 400,
       "thumbnailHeight": 500,
-      "title": "Gallant Fowl",
+      "title": "Pensive Buddha",
       "medium":"Mixed Media",
-      "price":"$175",
-      "size":"8x10",
+      "price":"$800",
+      "size": "12x16",
       "sold": false
     },
 
     {
       "id": 9,
-      "src": "https://moarart.net/images/arrogant_display.jpg",
-      "thumbnail": "https://moarart.net/images/arrogant_display_thumb.jpg",
-      "thumbnailWidth": 397,
+      "src": "https://moarart.net/images/the_relaxing_buddha.jpg",
+      "thumbnail": "https://moarart.net/images/the_relaxing_buddha_thumb.jpg",
+      "thumbnailWidth": 390,
       "thumbnailHeight": 500,
-      "title": "Arrogant Display",
-      "medium":"Mixed Media",
-      "price":"$250",
+      "title": "The Relaxing Buddha",
+      "medium":"Colored Pencil",
+      "price":"$450",
       "size":"8x10",
       "sold": false
     },
 
     {
       "id": 10,
-      "src": "https://moarart.net/images/at_first_glance.jpg",
-      "thumbnail": "https://moarart.net/images/at_first_glance_thumb.jpg",
-      "thumbnailWidth": 394,
+      "src": "https://moarart.net/images/moksha.jpg",
+      "thumbnail": "https://moarart.net/images/moksha_thumb.jpg",
+      "thumbnailWidth": 400,
       "thumbnailHeight": 500,
-      "title": "At First Glance",
+      "title": "Moksha",
       "medium":"Colored Pencil",
-      "price":"$275",
-      "size":"9x11",
+      "price":"$1500",
+      "size":"11x14",
       "sold": false
     },
 
@@ -157,58 +157,6 @@
 
     {
       "id": 12,
-      "src": "https://moarart.net/images/the_relaxing_buddha.jpg",
-      "thumbnail": "https://moarart.net/images/the_relaxing_buddha_thumb.jpg",
-      "thumbnailWidth": 390,
-      "thumbnailHeight": 500,
-      "title": "The Relaxing Buddha",
-      "medium":"Colored Pencil",
-      "price":"$450",
-      "size":"8x10",
-      "sold": false
-    },
-
-    {
-      "id": 13,
-      "src": "https://moarart.net/images/magnolias.jpg",
-      "thumbnail": "https://moarart.net/images/magnolias_thumb.jpg",
-      "thumbnailWidth": 370,
-      "thumbnailHeight": 500,
-      "title": "Magnolias",
-      "medium":"Colored Pencil",
-      "price":"$200",
-      "size":"8x10",
-      "sold": false
-    },
-
-    {
-      "id": 14,
-      "src": "https://moarart.net/images/taal.jpg",
-      "thumbnail": "https://moarart.net/images/taal_thumb.jpg",
-      "thumbnailWidth": 394,
-      "thumbnailHeight": 500,
-      "title": "Taal",
-      "medium":"Mixed Media",
-      "price":"$275",
-      "size":"8x10",
-      "sold": false
-    },
-
-    {
-      "id": 15,
-      "src": "https://moarart.net/images/cymbolic.jpg",
-      "thumbnail": "https://moarart.net/images/cymbolic_thumb.jpg",
-      "thumbnailWidth": 371,
-      "thumbnailHeight": 500,
-      "title": "Cymbolic",
-      "medium":"Colored Pencil",
-      "price":"$275",
-      "size":"8x10",
-      "sold": false
-    },
-
-    {
-      "id": 16,
       "src": "https://moarart.net/images/matsya.jpg",
       "thumbnail": "https://moarart.net/images/matsya_thumb.jpg",
       "thumbnailWidth": 399,
@@ -221,46 +169,111 @@
     },
 
     {
-      "id": 17,
-      "src": "https://moarart.net/images/tree_of_life_2.jpg",
-      "thumbnail": "https://moarart.net/images/tree_of_life_2_thumb.jpg",
-      "thumbnailWidth": 389,
+      "id": 13,
+      "src": "https://moarart.net/images/the_lotus_pond.jpg",
+      "thumbnail": "https://moarart.net/images/the_lotus_pond_thumb.jpg",
+      "thumbnailWidth": 635,
       "thumbnailHeight": 500,
-      "title": "Tree of Life",
-      "medium":"Mixed Media",
-      "price":"Sold ($800)",
-      "size":"12x16",
+      "title": "The Lotus Pond",
+      "medium": "Mixed Media",
+      "price": "Held for Show ($125)",
+      "size": "6x8",
       "sold": true
     },
 
     {
-      "id": 18,
-      "src": "https://moarart.net/images/moksha.jpg",
-      "thumbnail": "https://moarart.net/images/moksha_thumb.jpg",
-      "thumbnailWidth": 400,
+      "id": 14,
+      "src": "https://moarart.net/images/nandi.jpg",
+      "thumbnail": "https://moarart.net/images/nandi_thumb.jpg",
+      "thumbnailWidth": 377,
       "thumbnailHeight": 500,
-      "title": "Moksha",
+      "title": "Nandi",
+      "medium": "Mixed Media",
+      "price": "Held for Show ($150)",
+      "size": "5x7",
+      "sold": true
+    },
+
+    {
+      "id": 15,
+      "src": "https://moarart.net/images/ashwa.jpg",
+      "thumbnail": "https://moarart.net/images/ashwa_thumb.jpg",
+      "thumbnailWidth": 664,
+      "thumbnailHeight": 500,
+      "title": "Ashwa",
+      "medium": "Colored Pencil",
+      "price": "Held for Show ($175)",
+      "size": "8x10",
+      "sold": true
+    },
+
+    {
+      "id": 16,
+      "src": "https://moarart.net/images/blauet.jpg",
+      "thumbnail": "https://moarart.net/images/blauet_thumb.jpg",
+      "thumbnailWidth": 370,
+      "thumbnailHeight": 500,
+      "title": "Blauet",
       "medium":"Colored Pencil",
-      "price":"$1500",
-      "size":"11x14",
+      "price":"$350",
+      "size": "8x10",
       "sold": false
     },
 
     {
-      "id": 19,
-      "src": "https://moarart.net/images/peaches.jpg",
-      "thumbnail": "https://moarart.net/images/peaches_thumb.jpg",
-      "thumbnailWidth": 385,
+      "id": 17,
+      "src": "https://moarart.net/images/oriental_beauty.jpg",
+      "thumbnail": "https://moarart.net/images/oriental_beauty_thumb.jpg",
+      "thumbnailWidth": 386,
       "thumbnailHeight": 500,
-      "title": "Peaches",
-      "medium":"Mixed Media",
-      "price":"$120",
+      "title": "Oriental Beauty",
+      "medium":"Colored Pencil",
+      "price":"$350",
       "size":"8x10",
       "sold": false
     },
 
     {
+      "id": 18,
+      "src": "https://moarart.net/images/gallant_fowl.jpg",
+      "thumbnail": "https://moarart.net/images/gallant_fowl_thumb.jpg",
+      "thumbnailWidth": 642,
+      "thumbnailHeight": 500,
+      "title": "Gallant Fowl",
+      "medium":"Mixed Media",
+      "price":"$175",
+      "size":"8x10",
+      "sold": false
+    },
+
+    {
+      "id": 19,
+      "src": "https://moarart.net/images/mor.jpg",
+      "thumbnail": "https://moarart.net/images/mor_thumb.jpg",
+      "thumbnailWidth": 387,
+      "thumbnailHeight": 500,
+      "title": "Mor",
+      "medium": "Mixed Media",
+      "price": "Held for Show ($150)",
+      "size": "6x8",
+      "sold": true
+    },
+
+    {
       "id": 20,
+      "src": "https://moarart.net/images/arrogant_display.jpg",
+      "thumbnail": "https://moarart.net/images/arrogant_display_thumb.jpg",
+      "thumbnailWidth": 397,
+      "thumbnailHeight": 500,
+      "title": "Arrogant Display",
+      "medium":"Mixed Media",
+      "price":"$250",
+      "size":"8x10",
+      "sold": false
+    },
+
+    {
+      "id": 21,
       "src": "https://moarart.net/images/perched.jpg",
       "thumbnail": "https://moarart.net/images/perched_thumb.jpg",
       "thumbnailWidth": 394,
@@ -273,33 +286,7 @@
     },
 
     {
-      "id": 21,
-      "src": "https://moarart.net/images/the_couple.jpg",
-      "thumbnail": "https://moarart.net/images/the_couple_thumb.jpg",
-      "thumbnailWidth": 844,
-      "thumbnailHeight": 500,
-      "title": "The Couple",
-      "medium":"Pastels",
-      "price":"Sold",
-      "size":"10x13 Each",
-      "sold": false
-    },
-
-    {
       "id": 22,
-      "src": "https://moarart.net/images/sunrise.jpg",
-      "thumbnail": "https://moarart.net/images/sunrise_thumb.jpg",
-      "thumbnailWidth": 385,
-      "thumbnailHeight": 500,
-      "title": "Sunrise",
-      "medium":"Oil",
-      "price":"Sold",
-      "size":"30x40",
-      "sold": false
-    },
-
-    {
-      "id": 23,
       "src": "https://moarart.net/images/moar.jpg",
       "thumbnail": "https://moarart.net/images/moar_thumb.jpg",
       "thumbnailWidth": 503,
@@ -312,106 +299,119 @@
     },
 
     {
+      "id": 23,
+      "src": "https://moarart.net/images/peaches.jpg",
+      "thumbnail": "https://moarart.net/images/peaches_thumb.jpg",
+      "thumbnailWidth": 385,
+      "thumbnailHeight": 500,
+      "title": "Peaches",
+      "medium":"Mixed Media",
+      "price":"$120",
+      "size":"8x10",
+      "sold": false
+    },
+
+    {
       "id": 24,
+      "src": "https://moarart.net/images/sunrise.jpg",
+      "thumbnail": "https://moarart.net/images/sunrise_thumb.jpg",
+      "thumbnailWidth": 385,
+      "thumbnailHeight": 500,
+      "title": "Sunrise",
+      "medium":"Oil",
+      "price":"Sold",
+      "size":"30x40",
+      "sold": false
+    },
+
+    {
+      "id": 25,
       "src": "https://moarart.net/images/a_pair_of_cranes.jpg",
       "thumbnail": "https://moarart.net/images/a_pair_of_cranes_thumb.jpg",
       "thumbnailWidth": 377,
       "thumbnailHeight": 500,
       "title": "A Pair of Cranes",
       "medium": "Mixed Media",
-      "price": "Held for Show",
+      "price": "Held for Show ($100)",
       "size": "5x7",
       "sold": true
     },
 
     {
-      "id": 25,
-      "src": "https://moarart.net/images/the_lotus_pond.jpg",
-      "thumbnail": "https://moarart.net/images/the_lotus_pond_thumb.jpg",
-      "thumbnailWidth": 635,
+      "id": 26,
+      "src": "https://moarart.net/images/at_first_glance.jpg",
+      "thumbnail": "https://moarart.net/images/at_first_glance_thumb.jpg",
+      "thumbnailWidth": 394,
       "thumbnailHeight": 500,
-      "title": "The Lotus Pond",
-      "medium": "Mixed Media",
-      "price": "Held for Show",
-      "size": "6x8",
-      "sold": true
+      "title": "At First Glance",
+      "medium":"Colored Pencil",
+      "price":"$275",
+      "size":"9x11",
+      "sold": false
     },
 
     {
-      "id": 26,
+      "id": 27,
+      "src": "https://moarart.net/images/the_couple.jpg",
+      "thumbnail": "https://moarart.net/images/the_couple_thumb.jpg",
+      "thumbnailWidth": 844,
+      "thumbnailHeight": 500,
+      "title": "The Couple",
+      "medium":"Pastels",
+      "price":"Sold",
+      "size":"10x13 Each",
+      "sold": false
+    },
+
+    {
+      "id": 28,
       "src": "https://moarart.net/images/duulhan.jpg",
       "thumbnail": "https://moarart.net/images/duulhan_thumb.jpg",
       "thumbnailWidth": 382,
       "thumbnailHeight": 500,
       "title": "Duulhan",
       "medium": "Colored Pencil",
-      "price":"Held for Show",
+      "price":"Held for Show ($175)",
       "size": "5x7",
-      "sold": true
-    },
-
-    {
-      "id": 27,
-      "src": "https://moarart.net/images/nandi.jpg",
-      "thumbnail": "https://moarart.net/images/nandi_thumb.jpg",
-      "thumbnailWidth": 377,
-      "thumbnailHeight": 500,
-      "title": "Nandi",
-      "medium": "Mixed Media",
-      "price": "Held for Show",
-      "size": "5x7",
-      "sold": true
-    },
-
-    {
-      "id": 28,
-      "src": "https://moarart.net/images/haar.jpg",
-      "thumbnail": "https://moarart.net/images/haar_thumb.jpg",
-      "thumbnailWidth": 382,
-      "thumbnailHeight": 500,
-      "title": "Haar",
-      "medium": "Colored Pencil",
-      "price": "Held for Show",
-      "size": "6x8",
       "sold": true
     },
 
     {
       "id": 29,
-      "src": "https://moarart.net/images/mor.jpg",
-      "thumbnail": "https://moarart.net/images/mor_thumb.jpg",
-      "thumbnailWidth": 387,
-      "thumbnailHeight": 500,
-      "title": "Mor",
-      "medium": "Mixed Media",
-      "price": "Held for Show",
-      "size": "6x8",
-      "sold": true
-    },
-
-    {
-      "id": 30,
       "src": "https://moarart.net/images/krishna.jpg",
       "thumbnail": "https://moarart.net/images/krishna_thumb.jpg",
       "thumbnailWidth": 369,
       "thumbnailHeight": 500,
       "title": "Krishna",
       "medium": "Colored Pencil",
-      "price": "Held for Show",
+      "price": "Held for Show ($175)",
+      "size": "6x8",
+      "sold": true
+    },
+
+    {
+      "id": 30,
+      "src": "https://moarart.net/images/haar.jpg",
+      "thumbnail": "https://moarart.net/images/haar_thumb.jpg",
+      "thumbnailWidth": 382,
+      "thumbnailHeight": 500,
+      "title": "Haar",
+      "medium": "Colored Pencil",
+      "price": "Held for Show ($125)",
       "size": "6x8",
       "sold": true
     },
 
     {
       "id": 31,
-      "src": "https://moarart.net/images/ashwa.jpg",
-      "thumbnail": "https://moarart.net/images/ashwa_thumb.jpg",
-      "thumbnailWidth": 664,
+      "src": "https://moarart.net/images/magnolias.jpg",
+      "thumbnail": "https://moarart.net/images/magnolias_thumb.jpg",
+      "thumbnailWidth": 370,
       "thumbnailHeight": 500,
-      "title": "Ashwa",
-      "medium": "Colored Pencil",
-      "price": "Held for Show",
-      "size": "8x10",
-      "sold": true
+      "title": "Magnolias",
+      "medium":"Colored Pencil",
+      "price":"$200",
+      "size":"8x10",
+      "sold": false
     }
 ]
