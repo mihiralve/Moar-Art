@@ -14,6 +14,7 @@ import { createBrowserHistory } from 'history'
 const history = createBrowserHistory()
 
 const BASE_URL = "https://moarart.net/"
+const IMAGE_URL = "https://api.mihiralve.com/static/images/"
 
 class App extends Component {
   constructor(props){
@@ -102,9 +103,9 @@ class Home extends Component {
                 </div>
               </Col>
               <Col sm={24} lg={12} className="home-col">
-              <a href="https://moarart.net/detail/22"><img src="https://moarart.net/images/moar.jpg" className="home-img"/></a>
+              <a href="https://moarart.net/detail/22"><img src={IMAGE_URL + "moar.jpg"} className="home-img"/></a>
 
-              <a href="https://moarart.net/detail/2"><img src="https://moarart.net/images/ganapati_3.jpg" className="home-img"/></a>
+              <a href="https://moarart.net/detail/2"><img src={IMAGE_URL + "ganapati_3.jpg"} className="home-img"/></a>
 
               </Col>
             </Row>
@@ -215,7 +216,7 @@ class Gallery extends Component{
     let border = 5;
     let fullWidth = imgWidth + 2*(margin + border)
 
-    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:fullWidth}
+    return {img:<img src={IMAGE_URL + img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:fullWidth}
   }
 
   renderGallery(){
@@ -310,7 +311,7 @@ class Detail extends Component {
           </Row>
           <Row>
             <Col sm={24} lg={12} className="detail-col">
-              <img src={this.img.src} className="detail-img"/>
+              <img src={IMAGE_URL + this.img.src} className="detail-img"/>
               <div className="detail-arrow-container">{this.getPrevButton()}{this.getNextButton()}</div>
             </Col>
             <Col sm={24} lg={12} className="detail-col">
