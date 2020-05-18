@@ -137,9 +137,9 @@
       "thumbnailHeight": 500,
       "title": "Moksha",
       "medium":"Colored Pencil",
-      "price":"$1500",
+      "price":"Held for show ($2000)",
       "size":"11x14",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -163,9 +163,9 @@
       "thumbnailHeight": 500,
       "title": "Matsya",
       "medium":"Mixed Media",
-      "price":"$800",
+      "price":"Held for show ($800)",
       "size":"12x16",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -241,7 +241,7 @@
       "thumbnailHeight": 500,
       "title": "Gallant Fowl",
       "medium":"Mixed Media",
-      "price":"$175",
+      "price":"$125",
       "size":"8x10",
       "sold": false
     },
@@ -293,9 +293,9 @@
       "thumbnailHeight": 500,
       "title": "Moar",
       "medium":"Oil",
-      "price":"Sold",
+      "price":"Held in artist's private collection",
       "size":"18x18",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -306,7 +306,7 @@
       "thumbnailHeight": 500,
       "title": "Peaches",
       "medium":"Mixed Media",
-      "price":"$120",
+      "price":"$175",
       "size":"8x10",
       "sold": false
     },
@@ -319,9 +319,9 @@
       "thumbnailHeight": 500,
       "title": "Sunrise",
       "medium":"Oil",
-      "price":"Sold",
+      "price":"Held in artist's private collection",
       "size":"30x40",
-      "sold": false
+      "sold": true
     },
 
     {
