@@ -103,9 +103,9 @@ class Home extends Component {
                 </div>
               </Col>
               <Col sm={24} lg={12} className="home-col">
-              <a href="https://moarart.net/detail/22"><img src={IMAGE_URL + "moar.jpg"} className="home-img"/></a>
+              <a href="https://moarart.net/detail/22"><img src={IMAGE_URL + "moar_thumb.jpg"} className="home-img"/></a>
 
-              <a href="https://moarart.net/detail/2"><img src={IMAGE_URL + "ganapati_3.jpg"} className="home-img"/></a>
+              <a href="https://moarart.net/detail/2"><img src={IMAGE_URL + "ganapati_3_thumb.jpg"} className="home-img"/></a>
 
               </Col>
             </Row>
