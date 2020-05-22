@@ -6,8 +6,8 @@
       "thumbnailWidth": 375,
       "thumbnailHeight": 500,
       "title": "Baby Ganesha",
-      "medium":"Colored Pencil",
-      "price":"Sold ($350)",
+      "medium":"Pencil",
+      "price":"Held in artist's private collection",
       "size": "8x10",
       "sold": true
     },
@@ -58,7 +58,7 @@
       "thumbnailWidth": 371,
       "thumbnailHeight": 500,
       "title": "Cymbolic",
-      "medium":"Colored Pencil",
+      "medium":"Mixed Media",
       "price":"$275",
       "size":"8x10",
       "sold": false
@@ -358,9 +358,9 @@
       "thumbnailHeight": 500,
       "title": "The Couple",
       "medium":"Pastels",
-      "price":"Sold",
+      "price":"Held in artist's private collection",
       "size":"10x13 Each",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -410,7 +410,7 @@
       "thumbnailHeight": 500,
       "title": "Magnolias",
       "medium":"Colored Pencil",
-      "price":"$200",
+      "price":"$150",
       "size":"8x10",
       "sold": false
     }
