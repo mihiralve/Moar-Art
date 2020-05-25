@@ -29,11 +29,33 @@
   text-align: center;
 }
 
+.detail-arrow {
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+  text-align: center;
+}
+
+.detail-arrow-container {
+  max-width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.detail-button {
+  border: 2px solid black;
+  text-align: center;
+}
+
+.detail-button:hover {
+  background-color: white;
+}
+
 .detail-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   max-width: 85%;
   max-height: 750px;
   height: auto;
@@ -200,5 +222,6 @@
 
 .gallery-img {
   display: inline-block;
-  margin: 3px;
+  margin: 10px;
+  border: 5px solid black;
 }

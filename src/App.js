@@ -13,6 +13,8 @@ import {
 import { createBrowserHistory } from 'history'
 const history = createBrowserHistory()
 
+const BASE_URL = "https://moarart.net/"
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -205,19 +207,15 @@ class Gallery extends Component{
     let imgWidth = (this.props.rowHeight/img.thumbnailHeight) * img.thumbnailWidth;
 
     if (this.state.width != 0 && imgWidth > this.state.width){
-      console.log(this.state.width)
-      console.log(imgHeight)
-      console.log(imgWidth)
-
       imgHeight = (this.state.width/imgWidth) * imgHeight;
       imgWidth = this.state.width;
-     
-      console.log(imgHeight)
-      console.log(imgWidth)
     }
 
-    // add 4 to width to leave room for the margins
-    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:imgWidth+6}
+    let margin = 10; 
+    let border = 5;
+    let fullWidth = imgWidth + 2*(margin + border)
+
+    return {img:<img src={img.thumbnail} height={imgHeight} width={imgWidth} onClick={() => this.props.onClickThumbnail(img.id)}/>, width:fullWidth}
   }
 
   renderGallery(){
@@ -262,6 +260,8 @@ class Detail extends Component {
     super(props);
     this.img = this.getImage(this.props.match.params.id)
     this.checkSold = this.checkSold.bind(this)
+    this.getPrevButton = this.getPrevButton.bind(this);
+    this.getNextButton = this.getNextButton.bind(this);
   }
 
   changeComponent(newComponent){
@@ -283,6 +283,24 @@ class Detail extends Component {
     }
   }
 
+  // Show previous button as long as it is not the first image in the gallery
+  getPrevButton(){
+    if (this.img.id > 0){
+      return(
+        <a href={BASE_URL + "detail/" + String(this.img.id-1)} className="detail-arrow"><h1 className="detail-button">&larr;</h1></a>
+      );
+    } 
+  }
+
+  // Show next button as long as it is not the last image in the gallery
+  getNextButton(){
+    if (this.img.id < IMAGES.length-1){
+      return(
+        <a href={BASE_URL + "detail/" + String(this.img.id+1)} className="detail-arrow"><h1 className="detail-button">&rarr;</h1></a>
+      );
+    } 
+  }
+
   render(){
     return(
       <Router history={history}>
@@ -293,6 +311,7 @@ class Detail extends Component {
           <Row>
             <Col sm={24} lg={12} className="detail-col">
               <img src={this.img.src} className="detail-img"/>
+              <div className="detail-arrow-container">{this.getPrevButton()}{this.getNextButton()}</div>
             </Col>
             <Col sm={24} lg={12} className="detail-col">
               <h2 className="detail-info">Size: {this.img.size}</h2>
