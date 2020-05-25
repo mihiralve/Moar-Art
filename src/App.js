@@ -13,7 +13,7 @@ import {
 import { createBrowserHistory } from 'history'
 const history = createBrowserHistory()
 
-const BASE_URL = "https://moarart.net/"
+const BASE_URL = "https://morkala.art/"
 const IMAGE_URL = "https://api.mihiralve.com/static/images/"
 
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
           <div className="menubar">
             <Row type="flex" justify="space-between" align="top">
               <Col span={24}>
-                <a href="https://moarart.net/"><h1 className="website-head">Moar Art</h1></a>
+                <a href="https://morkala.art/"><h1 className="website-head">Mor Kala</h1></a>
               </Col>
             </Row>
             <Row type="flex" justify="space-between" align="top">
@@ -98,14 +98,14 @@ class Home extends Component {
                     After finishing my master’s in physics, I started my career as a telecommunication engineer, but have always had an artistic flair and dabbled a little bit in art as a hobby. I am mostly self-taught, which has led me to experiment with many different mediums and styles of work. I particularly love creating Indian art like Madhubani, Gond and Pichwai. While living in India, I worked with the late artist Sachin Nath, who helped me refine my technique. I continue to incorporate his teachings and look to various other cultures and motifs for inspiration. I work in oils, pastels, pencils, and ink with various nature inspired subjects and pick engaging aspects of different forms to develop a diverse body of work.
                   </p>
                   <p className="contact-bio">
-                    Email: <a href="mailto:contact@moarart.net">contact@moarart.net</a>
+                    Email: <a href="mailto:contact@morkala.art">contact@morkala.art</a>
                   </p>
                 </div>
               </Col>
               <Col sm={24} lg={12} className="home-col">
-              <a href="https://moarart.net/detail/22"><img src={IMAGE_URL + "moar_thumb.jpg"} className="home-img"/></a>
+              <a href="https://morkala.art/detail/22"><img src={IMAGE_URL + "moar_thumb.jpg"} className="home-img"/></a>
 
-              <a href="https://moarart.net/detail/2"><img src={IMAGE_URL + "ganapati_3_thumb.jpg"} className="home-img"/></a>
+              <a href="https://morkala.art/detail/2"><img src={IMAGE_URL + "ganapati_3_thumb.jpg"} className="home-img"/></a>
 
               </Col>
             </Row>
@@ -277,7 +277,7 @@ class Detail extends Component {
     if (!this.img.sold){
       return(
         <div>
-          <h2 className="detail-info">For inquiries email <a href="mailto:contact@moarart.net">contact@moarart.net</a> or fill out the form below.</h2>
+          <h2 className="detail-info">For inquiries email <a href="mailto:contact@morkala.art">contact@morkala.art</a> or fill out the form below.</h2>
           <ContactForm pieceName={this.img.title}/>
         </div>
       )

@@ -137,9 +137,9 @@
       "thumbnailHeight": 500,
       "title": "Moksha",
       "medium":"Colored Pencil",
-      "price":"$1500",
+      "price":"Held for show ($2000)",
       "size":"11x14",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -163,9 +163,9 @@
       "thumbnailHeight": 500,
       "title": "Matsya",
       "medium":"Mixed Media",
-      "price":"$800",
+      "price":"Held for show ($800)",
       "size":"12x16",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -241,7 +241,7 @@
       "thumbnailHeight": 500,
       "title": "Gallant Fowl",
       "medium":"Mixed Media",
-      "price":"$175",
+      "price":"$125",
       "size":"8x10",
       "sold": false
     },
@@ -278,9 +278,9 @@
       "thumbnail": "perched_thumb.jpg",
       "thumbnailWidth": 394,
       "thumbnailHeight": 500,
-      "title": "Perched",
-      "medium":"Colored Pencel",
-      "price":"$75",
+      "title": "Arrogant Display",
+      "medium":"Mixed Media",
+      "price":"$250",
       "size":"8x10",
       "sold": false
     },

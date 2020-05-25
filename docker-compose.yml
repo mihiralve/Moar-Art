@@ -15,7 +15,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
-      - "traefik.frontend.rule=Host:moarart.net"
+      - "traefik.frontend.rule=Host:morkala.art"
       - "traefik.port=3000"
     networks:
       - web
