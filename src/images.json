@@ -6,8 +6,8 @@
       "thumbnailWidth": 375,
       "thumbnailHeight": 500,
       "title": "Baby Ganesha",
-      "medium":"Colored Pencil",
-      "price":"Sold ($350)",
+      "medium":"Pencil",
+      "price":"Held in artist's private collection",
       "size": "8x10",
       "sold": true
     },
@@ -278,9 +278,9 @@
       "thumbnail": "perched_thumb.jpg",
       "thumbnailWidth": 394,
       "thumbnailHeight": 500,
-      "title": "Perched",
-      "medium":"Colored Pencel",
-      "price":"$75",
+      "title": "Arrogant Display",
+      "medium":"Mixed Media",
+      "price":"$250",
       "size":"8x10",
       "sold": false
     },
@@ -293,9 +293,9 @@
       "thumbnailHeight": 500,
       "title": "Moar",
       "medium":"Oil",
-      "price":"Held in artist's private collection",
+      "price":"Sold",
       "size":"18x18",
-      "sold": true
+      "sold": false
     },
 
     {
@@ -306,7 +306,7 @@
       "thumbnailHeight": 500,
       "title": "Peaches",
       "medium":"Mixed Media",
-      "price":"$175",
+      "price":"$120",
       "size":"8x10",
       "sold": false
     },
@@ -319,9 +319,9 @@
       "thumbnailHeight": 500,
       "title": "Sunrise",
       "medium":"Oil",
-      "price":"Held in artist's private collection",
+      "price":"Sold",
       "size":"30x40",
-      "sold": true
+      "sold": false
     },
 
     {
