@@ -11,7 +11,7 @@
       "size": "8x10",
       "sold": true
     },
-
+    
     {
       "id": 1,
       "src": "ganapati_2.jpg",
@@ -72,7 +72,7 @@
       "thumbnailHeight": 500,
       "title": "Tree of Life",
       "medium":"Mixed Media",
-      "price":"Held for show ($800)",
+      "price":"$800",
       "size": "16x20",
       "sold": true
     },
@@ -85,7 +85,7 @@
       "thumbnailHeight": 500,
       "title": "Budding",
       "medium":"Mixed Media",
-      "price":"$450",
+      "price":"Held for Show ($450)",
       "size": "12x18",
       "sold": false
     },
@@ -137,7 +137,7 @@
       "thumbnailHeight": 500,
       "title": "Moksha",
       "medium":"Colored Pencil",
-      "price":"Held for show ($2000)",
+      "price":"$2000",
       "size":"11x14",
       "sold": true
     },
@@ -163,7 +163,7 @@
       "thumbnailHeight": 500,
       "title": "Matsya",
       "medium":"Mixed Media",
-      "price":"Held for show ($800)",
+      "price":"$800",
       "size":"12x16",
       "sold": true
     },
@@ -176,7 +176,7 @@
       "thumbnailHeight": 500,
       "title": "The Lotus Pond",
       "medium": "Mixed Media",
-      "price": "Held for Show ($125)",
+      "price": "$125",
       "size": "6x8",
       "sold": true
     },
@@ -202,7 +202,7 @@
       "thumbnailHeight": 500,
       "title": "Ashwa",
       "medium": "Colored Pencil",
-      "price": "Held for Show ($175)",
+      "price": "$175",
       "size": "8x10",
       "sold": true
     },
@@ -254,7 +254,7 @@
       "thumbnailHeight": 500,
       "title": "Mor",
       "medium": "Mixed Media",
-      "price": "Held for Show ($150)",
+      "price": "$150",
       "size": "6x8",
       "sold": true
     },
@@ -332,7 +332,7 @@
       "thumbnailHeight": 500,
       "title": "A Pair of Cranes",
       "medium": "Mixed Media",
-      "price": "Held for Show ($100)",
+      "price": "$100",
       "size": "5x7",
       "sold": true
     },
@@ -371,7 +371,7 @@
       "thumbnailHeight": 500,
       "title": "Duulhan",
       "medium": "Colored Pencil",
-      "price":"Held for Show ($175)",
+      "price":"$175",
       "size": "5x7",
       "sold": true
     },
@@ -384,7 +384,7 @@
       "thumbnailHeight": 500,
       "title": "Krishna",
       "medium": "Colored Pencil",
-      "price": "Held for Show ($175)",
+      "price": "$175",
       "size": "6x8",
       "sold": true
     },
@@ -397,7 +397,7 @@
       "thumbnailHeight": 500,
       "title": "Haar",
       "medium": "Colored Pencil",
-      "price": "Held for Show ($125)",
+      "price": "$125",
       "size": "6x8",
       "sold": true
     },
