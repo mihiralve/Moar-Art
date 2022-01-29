@@ -1,1 +1,1 @@
-docker build --tag=moarart --no-cache -f DockerFile .
+docker build --tag=moar-art_moarart --no-cache .

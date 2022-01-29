@@ -46,9 +46,9 @@
       "thumbnailHeight": 500,
       "title": "Taal",
       "medium":"Mixed Media",
-      "price":"$275",
+      "price":"Sold ($275)",
       "size":"8x10",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -58,7 +58,7 @@
       "thumbnailWidth": 371,
       "thumbnailHeight": 500,
       "title": "Cymbolic",
-      "medium":"Colored Pencil",
+      "medium":"Mixed Media",
       "price":"$275",
       "size":"8x10",
       "sold": false
@@ -85,9 +85,9 @@
       "thumbnailHeight": 500,
       "title": "Budding",
       "medium":"Mixed Media",
-      "price":"$450",
+      "price":"Held for show ($450)",
       "size": "12x18",
-      "sold": false
+      "sold": true
     },
 
     {
@@ -111,13 +111,26 @@
       "thumbnailHeight": 500,
       "title": "Tree of Life",
       "medium":"Mixed Media",
-      "price":"Held for show ($800)",
+      "price":"Sold ($800)",
       "size":"16x20",
       "sold": true
     },
 
     {
       "id": 9,
+      "src": "tree_of_life_5.jpg",
+      "thumbnail": "tree_of_life_5_thumb.jpg",
+      "thumbnailWidth": 384,
+      "thumbnailHeight": 500,
+      "title": "Tree of Life",
+      "medium":"Mixed Media",
+      "price":"Held for show ($900)",
+      "size":"16x20",
+      "sold": true
+    },
+
+    {
+      "id": 10,
       "src": "pensive_buddha.jpg",
       "thumbnail": "pensive_buddha_thumb.jpg",
       "thumbnailWidth": 400,
@@ -130,7 +143,7 @@
     },
 
     {
-      "id": 10,
+      "id": 11,
       "src": "the_relaxing_buddha.jpg",
       "thumbnail": "the_relaxing_buddha_thumb.jpg",
       "thumbnailWidth": 390,
@@ -143,7 +156,7 @@
     },
 
     {
-      "id": 11,
+      "id": 12,
       "src": "moksha.jpg",
       "thumbnail": "moksha_thumb.jpg",
       "thumbnailWidth": 400,
@@ -156,7 +169,7 @@
     },
 
     {
-      "id": 12,
+      "id": 13,
       "src": "simha.jpg",
       "thumbnail": "simha_thumb.jpg",
       "thumbnailWidth": 648,
@@ -169,7 +182,7 @@
     },
 
     {
-      "id": 13,
+      "id": 14,
       "src": "matsya.jpg",
       "thumbnail": "matsya_thumb.jpg",
       "thumbnailWidth": 399,
@@ -182,7 +195,7 @@
     },
 
     {
-      "id": 14,
+      "id": 15,
       "src": "the_lotus_pond.jpg",
       "thumbnail": "the_lotus_pond_thumb.jpg",
       "thumbnailWidth": 635,
@@ -195,7 +208,7 @@
     },
 
     {
-      "id": 15,
+      "id": 16,
       "src": "nandi.jpg",
       "thumbnail": "nandi_thumb.jpg",
       "thumbnailWidth": 377,
@@ -208,7 +221,7 @@
     },
 
     {
-      "id": 16,
+      "id": 17,
       "src": "ashwa.jpg",
       "thumbnail": "ashwa_thumb.jpg",
       "thumbnailWidth": 664,
@@ -221,7 +234,7 @@
     },
 
     {
-      "id": 17,
+      "id": 18,
       "src": "blauet.jpg",
       "thumbnail": "blauet_thumb.jpg",
       "thumbnailWidth": 370,
@@ -234,20 +247,20 @@
     },
 
     {
-      "id": 18,
+      "id": 19,
       "src": "oriental_beauty.jpg",
       "thumbnail": "oriental_beauty_thumb.jpg",
       "thumbnailWidth": 386,
       "thumbnailHeight": 500,
       "title": "Oriental Beauty",
       "medium":"Colored Pencil",
-      "price":"Held for show ($400)",
+      "price":"Sold ($400)",
       "size":"8x10",
-      "sold": false
+      "sold": true
     },
 
     {
-      "id": 19,
+      "id": 20,
       "src": "gallant_fowl.jpg",
       "thumbnail": "gallant_fowl_thumb.jpg",
       "thumbnailWidth": 642,
@@ -260,7 +273,7 @@
     },
 
     {
-      "id": 20,
+      "id": 21,
       "src": "mor.jpg",
       "thumbnail": "mor_thumb.jpg",
       "thumbnailWidth": 387,
@@ -273,7 +286,7 @@
     },
 
     {
-      "id": 21,
+      "id": 22,
       "src": "arrogant_display.jpg",
       "thumbnail": "arrogant_display_thumb.jpg",
       "thumbnailWidth": 397,
@@ -286,7 +299,7 @@
     },
 
     {
-      "id": 22,
+      "id": 23,
       "src": "perched.jpg",
       "thumbnail": "perched_thumb.jpg",
       "thumbnailWidth": 394,
@@ -299,7 +312,7 @@
     },
 
     {
-      "id": 23,
+      "id": 24,
       "src": "moar.jpg",
       "thumbnail": "moar_thumb.jpg",
       "thumbnailWidth": 503,
@@ -312,7 +325,7 @@
     },
 
     {
-      "id": 24,
+      "id": 25,
       "src": "peaches.jpg",
       "thumbnail": "peaches_thumb.jpg",
       "thumbnailWidth": 385,
@@ -325,7 +338,7 @@
     },
 
     {
-      "id": 25,
+      "id": 26,
       "src": "sunrise.jpg",
       "thumbnail": "sunrise_thumb.jpg",
       "thumbnailWidth": 385,
@@ -338,20 +351,20 @@
     },
 
     {
-      "id": 26,
+      "id": 27,
       "src": "a_pair_of_cranes.jpg",
       "thumbnail": "a_pair_of_cranes_thumb.jpg",
       "thumbnailWidth": 377,
       "thumbnailHeight": 500,
       "title": "A Pair of Cranes",
       "medium": "Mixed Media",
-      "price": "$100",
+      "price": "Sold ($100)",
       "size": "5x7",
       "sold": true
     },
 
     {
-      "id": 27,
+      "id": 28,
       "src": "at_first_glance.jpg",
       "thumbnail": "at_first_glance_thumb.jpg",
       "thumbnailWidth": 394,
@@ -364,7 +377,7 @@
     },
 
     {
-      "id": 28,
+      "id": 29,
       "src": "the_couple.jpg",
       "thumbnail": "the_couple_thumb.jpg",
       "thumbnailWidth": 844,
@@ -377,7 +390,7 @@
     },
 
     {
-      "id": 29,
+      "id": 30,
       "src": "duulhan.jpg",
       "thumbnail": "duulhan_thumb.jpg",
       "thumbnailWidth": 382,
@@ -390,7 +403,7 @@
     },
 
     {
-      "id": 30,
+      "id": 31,
       "src": "krishna.jpg",
       "thumbnail": "krishna_thumb.jpg",
       "thumbnailWidth": 369,
@@ -403,7 +416,7 @@
     },
 
     {
-      "id": 31,
+      "id": 32,
       "src": "haar.jpg",
       "thumbnail": "haar_thumb.jpg",
       "thumbnailWidth": 382,
@@ -416,7 +429,7 @@
     },
 
     {
-      "id": 32,
+      "id": 33,
       "src": "magnolias.jpg",
       "thumbnail": "magnolias_thumb.jpg",
       "thumbnailWidth": 370,
@@ -426,5 +439,44 @@
       "price":"$200",
       "size":"8x10",
       "sold": false
+    },
+
+    {
+      "id": 34,
+      "src": "ganapati_4.jpg",
+      "thumbnail": "ganapati_4_thumb.jpg",
+      "thumbnailWidth": 392,
+      "thumbnailHeight": 500,
+      "title": "Ganesha",
+      "medium":"Mixed Media",
+      "price":"$700",
+      "size":"8x10",
+      "sold": false
+    },
+
+    {
+      "id": 35,
+      "src": "girl_with_peacock.jpg",
+      "thumbnail": "girl_with_peacock_thumb.jpg",
+      "thumbnailWidth": 403,
+      "thumbnailHeight": 500,
+      "title": "Girl with Peacock",
+      "medium":"Mixed Media",
+      "price":"$700",
+      "size":"11x15",
+      "sold": false
+    },
+
+    {
+      "id": 36,
+      "src": "philadelphia.jpg",
+      "thumbnail": "philadelphia_thumb.jpg",
+      "thumbnailWidth": 500,
+      "thumbnailHeight": 393,
+      "title": "Philadelphia",
+      "medium":"Mixed Media",
+      "price":"Held in artist's private collection",
+      "size":"16x12",
+      "sold": true
     }
 ]

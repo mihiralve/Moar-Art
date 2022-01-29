@@ -14,7 +14,8 @@ import { createBrowserHistory } from 'history'
 const history = createBrowserHistory()
 
 const BASE_URL = "https://morkala.art/"
-const IMAGE_URL = "https://api.mihiralve.com/static/images/"
+const IMAGE_URL = "https://api.mihiralve.com/static/images/high/"
+// const IMAGE_URL = "http://localhost:5000/static/images/high/" // Used for dev purposes
 
 class App extends Component {
   constructor(props){
@@ -91,7 +92,6 @@ class Home extends Component {
                 <div>
                   <p className="contact-name">
                     Meera Alve
-                    (Artist)
                   </p>
                   <img src={headshot} className="bio-img" align="left"/>
                   <p className="contact-bio">
@@ -125,7 +125,7 @@ class Work extends Component {
 
     this.state = {
       toDetail: false,
-      toDetailId: -1
+      toDetailId: -1 
     }
   }
 
